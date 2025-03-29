@@ -14,26 +14,62 @@
       display: none;
     }
 
+    
+
+    @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    @keyframes appear1 {
+            from {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        #Box {
+            animation: appear 1.5s ease-out forwards;
+            animation-range: entry 0% ;
+            animation-timeline: view();
+        }
+        #Box1 {
+            animation: appear1 1.5s ease-out forwards;
+            animation-range: entry 0% ;
+            animation-timeline: view();
+        }
+
+        @keyframes appear2 {
+            from {
+                opacity: 1;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-once {
+            animation: appear2 1.5s ease-out forwards;
+        }
+
+
+
     .scrollbar-hide {
       -ms-overflow-style: none;
       scrollbar-width: none;
     }
 
-
-    .nav-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: rgba(255, 255, 255, 0.2);
-      padding: 10px;
-      border-radius: 50%;
-      cursor: pointer;
-      transition: margin-left 0.3s;
-    }
-
-    .nav-btn:hover {
-      background-color: #557CFA;
-    }
 
     .transulate-btn {
       transition: transform 0.3s ease-in-out;
@@ -63,10 +99,10 @@
         </svg>
         <div class="hidden md:block w-3/5 ">
           <div class="navbar text-xl flex justify-between text-[#7B8392]">
-            <div class="flex justify-center items-center ">
+            <!-- <div class="flex justify-center items-center "> -->
 
-              <a href="#about" id="blink" class=" hover:text-amber-50 ">About Us</a>
-            </div>
+            <a href="#about" id="blink" class=" hover:text-amber-50 ">About Us</a>
+            <!-- </div> -->
             <a href="#services" id="blink" class="hover:text-amber-50">Services</a>
             <a href="#careers" id="blink" class="hover:text-amber-50">Careers</a>
             <a href="#partnerships" id="blink" class="hover:text-amber-50">Partnerships</a>
@@ -192,9 +228,9 @@
 
             <div class="space-y-6">
               <div>
-                <div class="flex items-baseline my-2">
-                  <div class="text-5xl">8</div>
-                  <span class="text-4xl font-bold text-[#557CFA]">+</span>
+                <div class="flex   my-2">
+                  <div id="number1" data-value="8" class="text-5xl">0</div>
+                  <span class="text-5xl font-bold text-[#557CFA]">+</span>
                 </div>
                 <div class="mt-2 text-lg text-[#B6BBC5] font-medium">
                   Industries revolutionized through visionary leadership and proven expertise.
@@ -203,27 +239,27 @@
 
 
               <div>
-                <div class="flex items-baseline my-2">
-                  <div class="text-5xl">8</div>
-                  <span class="text-4xl font-bold text-[#557CFA]">+</span>
+                <div class="flex  my-2">
+                  <div id="number1" data-value="30" class="text-5xl">0</div>
+                  <span class="text-5xl font-bold text-[#557CFA]">+</span>
                 </div>
                 <div class="mt-2 text-lg text-[#B6BBC5] font-medium">
                   Offshore Development Centers spearheaded by our leaders to drive global impact
                 </div>
               </div>
               <div>
-                <div class="flex items-baseline my-2">
-                  <div class="text-5xl">8</div>
-                  <span class="text-4xl font-bold text-[#557CFA]">+</span>
+                <div class="flex  my-2">
+                  <div id="number1" data-value="110" class="text-5xl">0</div>
+                  <span class="text-5xl font-bold text-[#557CFA]">+</span>
                 </div>
                 <div class="mt-2 text-lg text-[#B6BBC5] font-medium">
                   Years of collective leadership experience shaping transformative solutions
                 </div>
               </div>
               <div>
-                <div class="flex items-baseline my-2">
-                  <div class="text-5xl">8</div>
-                  <span class="text-4xl font-bold text-[#557CFA]">+</span>
+                <div class="flex my-2">
+                  <div id="number1" data-value="500" class="text-5xl">0</div>
+                  <span class="text-5xl font-bold text-[#557CFA]">+</span>
                 </div>
                 <div class="mt-2 text-lg text-[#B6BBC5] font-medium">
                   Engagements led to success, setting benchmarks for innovation and results
@@ -235,7 +271,7 @@
             </div>
 
             <a href="#"
-              class="inline-block mt-6 bg-[#557CFA] text-white py-2 px-6 rounded-2xl hover:bg-blue-600 transition-colors duration-300">
+              class="inline-block mt-6 bg-[#557CFA] text-white py-2 px-6 rounded-2xl hover:bg-white hover:text-slate-800 transition duration-300">
               About Us
             </a>
           </div>
@@ -264,20 +300,19 @@
         <!-- Right content with uneven boxes -->
         <div class="h-140 w-full grid grid-cols-1 md:grid-cols-2 md:grid-rows-12 gap-6">
           <!-- Large Box -->
-          <div
-            class="bg-[#050717]    p-6 rounded-2xl shadow-[-2px_-2px_2px_2px_#1C2959]  md:col-span-1 md:row-span-6   ">
-            <div class=" mb-4">
-
-              <img class="w-11 mb-4 translate-y-0 hover:-translate-y-2 transition-transform duration-500 ease-in-out"
+          <div id="Box" 
+        class="bg-[#050717] p-6 rounded-2xl shadow-[-2px_-2px_2px_2px_#1C2959] md:col-span-1 md:row-span-6 opacity-0">
+        <div class="mb-4">
+            <img class="w-11 mb-4 translate-y-0 hover:-translate-y-2 transition-transform duration-500 ease-in-out"
                 src="https://apphelix.ai/wp-content/uploads/2024/12/Shake-Hands-Line-Streamline-Remix.svg" alt="">
-            </div>
-            <h3 class="text-xl font-semibold mb-2">Consulting-led, Flexible Engagement</h3>
-            <p class="text-[#B6BBC5]">Processes that understand and align with your vision to accelerate your launch and
-              maintain adaptability.</p>
-          </div>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Consulting-led, Flexible Engagement</h3>
+        <p class="text-[#B6BBC5]">Processes that understand and align with your vision to accelerate your launch and maintain adaptability.</p>
+    </div>
+
 
           <!-- Smaller Box -->
-          <div
+          <div id="Box1"
             class="bg-[#050717]    p-4 rounded-2xl shadow-[-2px_-2px_2px_2px_#1C2959] md:row-span-5 transition duration-300">
             <div class="text-blue-500 mb-4">
               <img class="w-11 mb-4 translate-y-0 hover:-translate-y-2 transition-transform duration-500 ease-in-out"
@@ -288,7 +323,7 @@
           </div>
 
           <!-- Largeer Box -->
-          <div
+          <div id="Box1"
             class="bg-[#050717]    p-6 rounded-2xl shadow-[-2px_-2px_2px_2px_#1C2959] md:row-span-6 transition duration-300">
             <div class="text-blue-500 mb-4">
               <img class="w-11 mb-4 translate-y-0 hover:-translate-y-2 transition-transform duration-500 ease-in-out"
@@ -299,7 +334,7 @@
           </div>
 
           <!-- smaller Box -->
-          <div class="bg-[#050717]    p-4 rounded-2xl shadow-[-2px_-2px_2px_2px_#1C2959]  md:row-span-5 ">
+          <div id="Box" class="bg-[#050717]    p-4 rounded-2xl shadow-[-2px_-2px_2px_2px_#1C2959]  md:row-span-5 ">
             <div class="">
               <img class="w-11 mb-4 translate-y-0 hover:-translate-y-2 transition-transform duration-500 ease-in-out"
                 src="https://apphelix.ai/wp-content/uploads/2024/12/Exchange-2-Line-Streamline-Remix.svg" alt="">

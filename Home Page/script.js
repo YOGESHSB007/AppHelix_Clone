@@ -86,11 +86,11 @@ slider.addEventListener("scroll", () => {
   updateDots(index);
 });
 
-
-document.querySelectorAll("#blink").forEach(anchor => {
+document.querySelectorAll("#blink").forEach((anchor) => {
   // Create the blinking dot dynamically for each link
   const dot = document.createElement("div");
-  dot.className = "w-1.5 h-1.5 bg-orange-400 rounded-full animate-blink mr-1 hidden"; // Initially hidden
+  dot.className =
+    "w-1.5 h-1.5 bg-orange-400 rounded-full animate-blink mr-1 hidden"; // Initially hidden
 
   // Wrap anchor inside a flex div
   const wrapper = document.createElement("div");
@@ -112,3 +112,41 @@ document.querySelectorAll("#blink").forEach(anchor => {
     dot.classList.add("hidden");
   });
 });
+
+function updateCount(elements) {
+    const maxValue = Math.max(...elements.map(el => parseInt(el.dataset.value))); // Get max value
+    const duration = 2000; // Total animation duration in ms
+    const intervalTime = 10; // Update interval (ms)
+    const steps = duration / intervalTime; // Total number of increments
+
+    elements.forEach(element => {
+        const targetValue = parseInt(element.dataset.value);
+        let currentValue = 0;
+        const increment = targetValue / steps; // Adjust speed for equal duration
+
+        const increaseCount = setInterval(() => {
+            currentValue += increment;
+            if (currentValue >= targetValue) {
+                element.textContent = targetValue;
+                clearInterval(increaseCount);
+            } else {
+                element.textContent = Math.floor(currentValue); // Round down for a smoother effect
+            }
+        }, intervalTime);
+    });
+}
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const numbers = [...document.querySelectorAll("#number1")]; // Get all counters
+            numbers.forEach(num => num.classList.add("animate-once"));
+            updateCount(numbers);
+            observer.disconnect(); // Stop observing after animation triggers
+        }
+    });
+}, { threshold: 0.5 }); // Trigger when 50% of the elements are visible
+
+observer.observe(document.querySelector("#number1")); // Observe one element (others are handled inside)
+
+
