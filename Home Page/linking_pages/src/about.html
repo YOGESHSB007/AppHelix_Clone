@@ -1,0 +1,701 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@600&display=swap" rel="stylesheet">
+    
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+  <link href="./output.css" rel="stylesheet">
+  <style>
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+
+    .nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: margin-left 0.3s;
+    }
+
+    .nav-btn:hover {
+      background-color: #557CFA;
+    }
+
+    .transulate-btn {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    #show-btn:hover+.transulate-btn {
+      transform: translateX(2px) rotate(45deg);
+    }
+  </style>
+  <title>AppHelix Technologies Private Limited &#x2d; Impactful Engineering</title>
+</head>
+
+<body class="bg-[#1F2025] font-RedHat">
+
+  <!-- header -->
+  <header class="flex justify-center items-center pb-8">
+    <nav class="w-full max-w-300 ">
+      <div class="flex justify-between items-center p-2.5">
+        <a class="w-75" href="index.html">
+          <img src="https://apphelix.ai/wp-content/uploads/2024/11/AppHelix-Website-Logo-600X322-3-e1733559274148.png"
+            alt="noimg" srcset="">
+        </a>
+        <svg class="w-7 fill-white mr-5 md:hidden" id="clickToOpen" xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24">
+          <title>page-layout-sidebar-left</title>
+          <path d="M6,2H18A2,2 0 0,1 20,4V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V4A2,2 0 0,1 6,2M6,8V16H10V8H6Z" />
+        </svg>
+        <div class="hidden md:block w-3/5 ">
+          <div class="navbar text-xl flex justify-between text-[#7B8392]">
+            <div class="flex justify-center items-center ">
+
+              <a href="#about" id="blink" class=" hover:text-amber-50 ">About Us</a>
+            </div>
+            <a href="#services" id="blink" class="hover:text-amber-50">Services</a>
+            <a href="#careers" id="blink" class="hover:text-amber-50">Careers</a>
+            <a href="#partnerships" id="blink" class="hover:text-amber-50">Partnerships</a>
+            <a href="#blogs" id="blink" class="hover:text-amber-50">Blogs</a>
+            <a class="hover:text-amber-50" id="blink" href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+      <!-- <div id="overlay" class="fixed inset-0 bg-black/40 backdrop-blur-sm hidden z-50"> -->
+      <div
+        class="h-screen w-80 z-100 fixed top-0 bg-amber-50 transform -translate-x-520 transition-transform duration-1000 ease-in-out"
+        id="hiddensidebar">
+        <div class="flex justify-between items-center p-4">
+          <div class="text-2xl">Menu</div>
+          <button type="close" id="close"><svg id="close" class="w-7 cursor-pointer" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24">
+              <title>close-box-outline</title>
+              <path
+                d="M19,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M19,19H5V5H19V19M17,8.4L13.4,12L17,15.6L15.6,17L12,13.4L8.4,17L7,15.6L10.6,12L7,8.4L8.4,7L12,10.6L15.6,7L17,8.4Z" />
+            </svg></button>
+        </div>
+        <div class="mt-5">
+          <div class="h-12 flex items-center px-5 py-1.5 text-slate-400 ">
+            <h1>About Us</h1>
+
+          </div>
+          <hr class="h-px border-0 bg-gray-200">
+          <div class="h-12 flex items-center px-5 py-1.5 text-slate-400">
+            <h1>Services</h1>
+
+          </div>
+          <hr class="h-px border-0 bg-gray-200">
+          <div class="h-12 flex items-center px-5 py-1.5 text-slate-400">
+            <h1>Careers</h1>
+
+          </div>
+          <hr class="h-px border-0 bg-gray-200">
+          <div class="h-12 flex items-center px-5 py-1.5 text-slate-400">
+            <h1>Partnerships</h1>
+
+          </div>
+          <hr class="h-px border-0 bg-gray-200">
+          <div class="h-12 flex items-center px-5 py-1.5 text-slate-400">
+            <h1>Blogs</h1>
+
+          </div>
+          <hr class="h-px border-0 bg-gray-200">
+          <div class="h-12 flex items-center px-5 py-1.5 text-slate-400">
+            <h1>Contact</h1>
+
+          </div>
+          <hr class="h-px border-0 bg-gray-200">
+        </div>
+      </div>
+      <!-- </div> -->
+
+
+    </nav>
+  </header>
+  <!-- body -->
+  <main class="flex flex-col  justify-center items-center mx-3.5">
+    <!-- First container -->
+    <div class=" max-w-300 w-full bg-[#050717] rounded-2xl shadow-2xl text-white">
+        <div class="max-w-8xl mx-auto px-12 pt-12 pb-18">
+            <div>
+                <h2 class="text-4xl font-semibold text-white text-center">Consult, Engineer, Transform</h2><br>
+                <h3 class="text-4xl text-blue-400 text-center">The AppHelix Way</h3>
+                <div class="p-3">
+                    <div class="max-w-xl mx-auto text-center text-green-500">
+                        <h5 class="text-2xl font-semibold leading-tight tracking-wide text-gray-400 mt-8">
+                            Our focus starts and ends with engineering solutions that matter. We align technology with your business vision, delivering solutions that are as strategic as they are scalable.
+                        </h5>
+                    </div>
+                </div>
+                <style>
+                  ::selection {
+                      background-color: orange;
+                      color: white;
+                  }
+              </style>
+               </div>
+                <!--div for image for all sizes responisve  -->
+                <div class="p-4 overflow-hidden rounded-3xl shadow-lg w-full max-w-4xl mx-auto">
+                    <img class="w-full h-auto object-cover rounded-3xl" loading="lazy" decoding="async" 
+                        src="https://apphelix.ai/wp-content/uploads/2024/12/glowing-dna-helix-against-blue-black-background-scaled.jpg" 
+                        alt="Glowing DNA Helix"
+                        srcset="
+                        https://apphelix.ai/wp-content/uploads/2024/12/glowing-dna-helix-against-blue-black-background-scaled.jpg 2560w,
+                        https://apphelix.ai/wp-content/uploads/2024/12/glowing-dna-helix-against-blue-black-background-300x170.jpg 300w,
+                        https://apphelix.ai/wp-content/uploads/2024/12/glowing-dna-helix-against-blue-black-background-1024x580.jpg 1024w,
+                        https://apphelix.ai/wp-content/uploads/2024/12/glowing-dna-helix-against-blue-black-background-768x435.jpg 768w,
+                        https://apphelix.ai/wp-content/uploads/2024/12/glowing-dna-helix-against-blue-black-background-1536x870.jpg 1536w,
+                        https://apphelix.ai/wp-content/uploads/2024/12/glowing-dna-helix-against-blue-black-background-2048x1161.jpg 2048w,
+                        https://apphelix.ai/wp-content/uploads/2024/12/glowing-dna-helix-against-blue-black-background-988x560.jpg 988w,
+                        https://apphelix.ai/wp-content/uploads/2024/12/glowing-dna-helix-against-blue-black-background-600x340.jpg 600w"
+                        sizes="(max-width: 2560px) 100vw, 2560px">
+                </div>
+                
+                
+                <div class="p-6 max-w-4xl mx-auto text-center space-y-6 font-redhat">
+                    <h2 class="text-white text-3xl md:text-4xl font-bold tracking-tight leading-tight flex justify-center items-center gap-2 font-redhat" 
+                        style="margin-top: 2rem; font-size: 45px;">
+                        We Solve Problems That Others Can’t — or Won’t
+                    </h2>
+                
+                    <h2 class="text-xl text-gray-700 font-semibold"
+                        style="margin-top: 2rem;align-items: baseline;
+                        line-height: 1.1em;
+                        letter-spacing: 1.2px;
+                        color: #B8BDC7">
+                        AppHelix isn’t just another software company—it’s the bridge between business needs and impactful outcomes. 
+                        With over <span class="font-semibold text-blue-600">500 projects</span> delivered, we’ve built a legacy of turning complex business challenges into transformative, scalable technology solutions.
+                    </h2>
+                    <h2 class="text-xl text-gray-700 font-semibold"
+                    style="margin-top: 2rem;align-items: baseline;
+                    font-weight: 600;
+                    line-height: 1.1em;
+                    letter-spacing: 1.2px;
+                    color: #B8BDC7">
+                        From fixing broken systems to delivering scalable innovation, we’ve partnered with startups and enterprises alike. 
+                        If you’re tired of “<span class="italic">good enough</span>,” let’s get it right together.
+                    </h2>
+                </div><br>
+                <div class="bg-blue-400 rounded-xl p-6 max-w-3xl mx-auto text-white shadow-lg relative">
+                    <!-- Quote Icon -->
+                    <div class="absolute top-6 left-6 text-blue-300 text-4xl font-extrabold ">“</div><br>
+                    
+                    <!-- Quote Text -->
+                    <p class="text-lg italic pl-12 pr-6 leading-relaxed">
+                        “Good technology doesn’t just solve problems. It opens doors you didn’t even know were there.”
+                    </p>
+                    
+                    <!-- Author Details -->
+                    <div class="mt-6 flex flex-col items-end text-black text-align-last">
+                        <p class="font-semibold text-black-900"style=font-family:Roboto,Mono;>maxxx</p>
+                        <p class="text-sm text-gray-300">CEO, maxxx</p>
+                    </div>
+
+                </div>
+            </div>
+         </div>
+
+    </div>
+  </div><br>
+
+    <!--our process section-->
+    
+
+  
+        <!-- Small blinking dot -->
+        <div class="flex items-center justify-center mb-3">
+            <div class="w-2 h-2 bg-[#557CFA] rounded-full animate-blink mr-2"></div>
+            <h3 class="text-sm font-semibold text-[#FEFEFE]">Our Process</h3>
+        </div>
+
+        <!-- Heading -->
+        <h2 class="text-3xl font-bold text-white mt-2">Collaborative, Transparent, Results-Driven.</h2>
+
+        <!-- Description -->
+        <p class="text-lg text-gray-300 mt-4 text-center max-w-3xl mx-auto">
+            We don’t overcomplicate things. Here’s how we get to the heart of your challenge and deliver solutions <br>that work:
+        </p>
+
+    </div>
+
+      <div class="bg-[#1F2025] max-w-300 w-full text-white px-4 pt-6 ">
+                  <div class="flex flex-col items-center text-center p-6">
+                        <div class="bg-gray-900 flex items-center justify-center min-h-screen w-full">
+                            <div class="flex flex-wrap justify-center gap-6 px-4 max-w-6xl w-full">
+                                
+                                <!-- Card 1 -->
+                                <div class="bg-black text-white p-6 rounded-xl text-center cursor-pointer transition-all duration-300 relative group"
+                                    style="box-shadow: none; transition: all 0.3s ease-in-out; border: 1px solid rgba(255, 255, 255, 0.2);"
+                                    onmouseover="this.style.boxShadow='0px 0px 20px rgba(0, 204, 255, 0.6)'; this.style.transform='scale(1.05)';"
+                                    onmouseout="this.style.boxShadow='none'; this.style.transform='scale(1)';">
+                                    <p class="text-3xl font-bold mb-2 text-right">01</p>
+
+                                    <div class="flex justify-center">
+                                        <img src="https://apphelix.ai/wp-content/uploads/2024/11/Flag-Achievement-Streamline-Atlas.svg" alt="Icon 1"
+                                            class="w-12 h-12 mb-3">
+                                    </div>
+                                    <h3 class="text-lg font-semibold">We Listen</h3>
+                                    <p class="text-gray-400 text-sm mt-2">Before we touch a keyboard, we dig into your challenges, frustrations, and goals.</p>
+                                </div>
+                    
+                                <!-- Card 2 -->
+                                <div class="bg-black text-white p-6 rounded-xl text-center cursor-pointer transition-all duration-300 relative group"
+                                    style="box-shadow: none; transition: all 0.3s ease-in-out; border: 1px solid rgba(255, 255, 255, 0.2);"
+                                    onmouseover="this.style.boxShadow='0px 0px 20px rgba(0, 204, 255, 0.6)'; this.style.transform='scale(1.05)';"
+                                    onmouseout="this.style.boxShadow='none'; this.style.transform='scale(1)';">
+                                    <p class="text-3xl font-bold mb-2">02</p>
+                                    <div class="flex justify-center">
+                                        <img src="https://apphelix.ai/wp-content/uploads/2024/11/Proto-Io-Logo-2-Streamline-Logos.svg" alt="Icon 2"
+                                            class="w-12 h-12 mb-3">
+                                    </div>
+                                    <h3 class="text-lg font-semibold">We Prototype Quickly</h3>
+                                    <p class="text-gray-400 text-sm mt-2">Early iterations save time and uncover what really works.</p>
+                                </div>
+                    
+                                <!-- Card 3 -->
+                                <div class="bg-black text-white p-6 rounded-xl text-center cursor-pointer transition-all duration-300 relative group"
+                                    style="box-shadow: none; transition: all 0.3s ease-in-out; border: 1px solid rgba(255, 255, 255, 0.2);"
+                                    onmouseover="this.style.boxShadow='0px 0px 20px rgba(0, 204, 255, 0.6)'; this.style.transform='scale(1.05)';"
+                                    onmouseout="this.style.boxShadow='none'; this.style.transform='scale(1)';">
+                                    <p class="text-3xl font-bold mb-2">03</p>
+                                    <div class="flex justify-center">
+                                        <img src="https://apphelix.ai/wp-content/uploads/2024/11/Enlarge-Streamline-Iconoir.svg" alt="Icon 3"
+                                            class="w-12 h-12 mb-3">
+                                    </div>
+                                    <h3 class="text-lg font-semibold">We Build for the Real World</h3>
+                                    <p class="text-gray-400 text-sm mt-2">No theoretical designs—just practical, scalable solutions that are ready to go.</p>
+                                </div>
+                    
+                                <!-- Card 4 -->
+                                <div class="bg-black text-white p-6 rounded-xl text-center cursor-pointer transition-all duration-300 relative group"
+                                    style="box-shadow: none; transition: all 0.3s ease-in-out; border: 1px solid rgba(255, 255, 255, 0.2);"
+                                    onmouseover="this.style.boxShadow='0px 0px 20px rgba(0, 204, 255, 0.6)'; this.style.transform='scale(1.05)';"
+                                    onmouseout="this.style.boxShadow='none'; this.style.transform='scale(1)';">
+                                    <p class="text-3xl font-bold mb-2">04</p>
+                                    <div class="flex justify-center">
+                                        <img src="https://apphelix.ai/wp-content/uploads/2024/11/Align-Vertical-Space-Around-Streamline-Lucide.svg" alt="Icon 4"
+                                            class="w-12 h-12 mb-3">
+                                    </div>
+                                    <h3 class="text-lg font-semibold">We Stick Around</h3>
+                                    <p class="text-gray-400 text-sm mt-2">After launch, we’re still here—fine-tuning, optimizing, and helping you scale.</p>
+                                </div>
+                    
+                            </div>
+                        </div>
+     </div>
+        
+        <!--founders templete -->
+      <div class="max-w-3xl mx-auto flex flex-col items-center text-center text-[#E2E5EB] text-lg font-normal leading-[1.55em] p-4 transition-all duration-[3000ms]">
+                          <div class="flex items-center mb-6">
+                            <!-- Blinking Dot -->
+                            <div class="w-2 h-2 bg-[#557CFA] rounded-full animate-blink mr-2"></div>
+                            
+                            <!-- Title -->
+                            <h2 class="text-xl font-semibold">Meet the Founders</h2>
+                        </div>
+                            <h2 class="text-4xl font-semibold mt-4">Engineers. Strategists. Problem Solvers.</h2>
+                            <h2 class="text-lg font-semibold leading-tight tracking-wide text-gray-400 mt-4">
+                                AppHelix is the brainchild of seasoned technologists who have spent their careers building software that<br> works where it matters most.
+                            </h2>
+                        </div>
+                        
+                        <section class="container mx-auto px-4 py-8  ">
+                            <!-- Responsive Flex/Grid Layout -->
+                            <div class="flex flex-wrap justify-center gap-6 sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+                                
+                                <!-- Team Member 1 -->
+                                <section class="container mx-auto px-4 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                                    <div class="relative group bg-white shadow-lg rounded-lg overflow-hidden"
+                                         style="width: 100%; max-width: 300px; position: relative;">
+                                
+                                        <!-- Image -->
+                                        <div class="relative w-full">
+                                            <img src="https://apphelix.ai/wp-content/uploads/2025/02/Untitled.png" 
+                                                 alt="Aurobinda Nanda" 
+                                                 class="w-full h-auto object-cover" 
+                                                 style="width: 100%; display: block;">
+                                        </div>
+                                
+                                        <!-- Overlay (Initially Hidden, Slides Up) -->
+                                        <div class="absolute bottom-0 left-0 w-full text-white p-6 flex flex-col justify-center items-center text-center"
+                                             style="height: 75%; transform: translateY(98%); transition: transform 0.4s ease-in-out; background-color: rgba(173, 216, 230, 0.9) !important; position: absolute; bottom: 0; left: 0;">
+                                            
+                                            <h3 class="text-lg font-semibold text-black">Aurobinda Nanda</h3>
+                                            <h4 class="text-sm font-light text-black">Chief Executive Officer</h4>
+                                            <p class="text-xs mt-2 px-2 text-black">
+                                                Ex Co-Founder who drove Happiest Minds’ phenomenal growth from $0 to $200M.<br>
+                                                30+ years of transforming IT vision into market success. Away from the boardroom, this CEO runs marathons.
+                                            </p>
+                                            
+                                            <!-- LinkedIn SVG Icon -->
+                                            <div class="mt-3">
+                                                <a href="#" target="_blank" class="inline-block p-2 bg-white/30 rounded-full">
+                                                    <svg role="img" width="24" height="24" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
+                                                        <title>LinkedIn</title>
+                                                        <path d="M22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0ZM7.12 20.5H3.56V9H7.1v11.5Zm-1.79-13c-1.14 0-1.84-.75-1.84-1.71s.72-1.72 1.87-1.72S7.22 4 7.22 4.92c0 .96-.69 1.71-1.89 1.71ZM20.5 20.5h-3.56v-5.4c0-1.33-.48-2.23-1.69-2.23-.92 0-1.47.62-1.72 1.23-.08.22-.1.51-.1.8v5.6H9.86s.05-9.08 0-10h3.56v1.42c.47-.72 1.31-1.75 3.18-1.75 2.33 0 4.09 1.5 4.09 4.74v5.6Z"/>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                
+                                <!--  INLINE CSS FIX FOR SLIDING EFFECT -->
+                                <style>
+                                    .group:hover div.absolute {
+                                        transform: translateY(0) !important; /* Slides up */
+                                    }
+                                </style>
+                                
+          <!-- Team Member 2 -->
+                                <section class="container mx-auto px-4 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                                    <div class="relative group bg-white shadow-lg rounded-lg overflow-hidden"
+                                         style="width: 100%; max-width: 300px; position: relative;">
+                                
+                                        <!-- Image -->
+                                        <div class="relative w-full">
+                                            <img src="https://apphelix.ai/wp-content/uploads/2025/02/Untitled.png" 
+                                                 alt="Aurobinda Nanda" 
+                                                 class="w-full h-auto object-cover" 
+                                                 style="width: 100%; display: block;">
+                                        </div>
+                                
+                                        <!-- Overlay (Initially Hidden, Slides Up) -->
+                                        <div class="absolute bottom-0 left-0 w-full text-white p-6 flex flex-col justify-center items-center text-center"
+                                             style="height: 75%; transform: translateY(98%); transition: transform 0.4s ease-in-out; background-color: rgba(173, 216, 230, 0.9) !important; position: absolute; bottom: 0; left: 0;">
+                                            
+                                            <h3 class="text-lg font-semibold text-black">Aurobinda Nanda</h3>
+                                            <h4 class="text-sm font-light text-black">Chief Executive Officer</h4>
+                                            <p class="text-xs mt-2 px-2 text-black">
+                                                Ex Co-Founder who drove Happiest Minds’ phenomenal growth from $0 to $200M.<br>
+                                                30+ years of transforming IT vision into market success. Away from the boardroom, this CEO runs marathons.
+                                            </p>
+                                            
+                                            <!-- LinkedIn SVG Icon -->
+                                            <div class="mt-3">
+                                                <a href="#" target="_blank" class="inline-block p-2 bg-white/30 rounded-full">
+                                                    <svg role="img" width="24" height="24" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
+                                                        <title>LinkedIn</title>
+                                                        <path d="M22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0ZM7.12 20.5H3.56V9H7.1v11.5Zm-1.79-13c-1.14 0-1.84-.75-1.84-1.71s.72-1.72 1.87-1.72S7.22 4 7.22 4.92c0 .96-.69 1.71-1.89 1.71ZM20.5 20.5h-3.56v-5.4c0-1.33-.48-2.23-1.69-2.23-.92 0-1.47.62-1.72 1.23-.08.22-.1.51-.1.8v5.6H9.86s.05-9.08 0-10h3.56v1.42c.47-.72 1.31-1.75 3.18-1.75 2.33 0 4.09 1.5 4.09 4.74v5.6Z"/>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                
+                                <!--  INLINE CSS FIX FOR SLIDING EFFECT -->
+                                <style>
+                                    .group:hover div.absolute {
+                                        transform: translateY(0) !important; /* Slides up */
+                                    }
+                                </style>
+                                
+         <!-- Team Member 3 -->
+                                <section class="container mx-auto px-4 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                                    <div class="relative group bg-white shadow-lg rounded-lg overflow-hidden"
+                                         style="width: 100%; max-width: 300px; position: relative;">
+                                
+                                        <!-- Image -->
+                                        <div class="relative w-full">
+                                            <img src="https://apphelix.ai/wp-content/uploads/2025/02/Untitled.png" 
+                                                 alt="Aurobinda Nanda" 
+                                                 class="w-full h-auto object-cover" 
+                                                 style="width: 100%; display: block;">
+                                        </div>
+                                
+                                        <!-- Overlay (Initially Hidden, Slides Up) -->
+                                        <div class="absolute bottom-0 left-0 w-full text-white p-6 flex flex-col justify-center items-center text-center"
+                                             style="height: 75%; transform: translateY(98%); transition: transform 0.4s ease-in-out; background-color: rgba(173, 216, 230, 0.9) !important; position: absolute; bottom: 0; left: 0;">
+                                            
+                                            <h3 class="text-lg font-semibold text-black">Aurobinda Nanda</h3>
+                                            <h4 class="text-sm font-light text-black">Chief Executive Officer</h4>
+                                            <p class="text-xs mt-2 px-2 text-black">
+                                                Ex Co-Founder who drove Happiest Minds’ phenomenal growth from $0 to $200M.<br>
+                                                30+ years of transforming IT vision into market success. Away from the boardroom, this CEO runs marathons.
+                                            </p>
+                                            
+                                            <!-- LinkedIn SVG Icon -->
+                                            <div class="mt-3">
+                                                <a href="#" target="_blank" class="inline-block p-2 bg-white/30 rounded-full">
+                                                    <svg role="img" width="24" height="24" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
+                                                        <title>LinkedIn</title>
+                                                        <path d="M22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0ZM7.12 20.5H3.56V9H7.1v11.5Zm-1.79-13c-1.14 0-1.84-.75-1.84-1.71s.72-1.72 1.87-1.72S7.22 4 7.22 4.92c0 .96-.69 1.71-1.89 1.71ZM20.5 20.5h-3.56v-5.4c0-1.33-.48-2.23-1.69-2.23-.92 0-1.47.62-1.72 1.23-.08.22-.1.51-.1.8v5.6H9.86s.05-9.08 0-10h3.56v1.42c.47-.72 1.31-1.75 3.18-1.75 2.33 0 4.09 1.5 4.09 4.74v5.6Z"/>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                
+                                <!--  INLINE CSS FIX FOR SLIDING EFFECT -->
+                                <style>
+                                    .group:hover div.absolute {
+                                        transform: translateY(0) !important; /* Slides up */
+                                    }
+                                </style>
+                                
+            <!-- Team Member 4 -->
+                                <section class="container mx-auto px-4 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                                    <div class="relative group bg-white shadow-lg rounded-lg overflow-hidden"
+                                         style="width: 100%; max-width: 300px; position: relative;">
+                                
+                                        <!-- Image -->
+                                        <div class="relative w-full">
+                                            <img src="https://apphelix.ai/wp-content/uploads/2025/02/Untitled.png" 
+                                                 alt="Aurobinda Nanda" 
+                                                 class="w-full h-auto object-cover" 
+                                                 style="width: 100%; display: block;">
+                                        </div>
+                                
+                                        <!-- Overlay (Initially Hidden, Slides Up) -->
+                                        <div class="absolute bottom-0 left-0 w-full text-white p-6 flex flex-col justify-center items-center text-center"
+                                             style="height: 75%; transform: translateY(98%); transition: transform 0.4s ease-in-out; background-color: rgba(173, 216, 230, 0.9) !important; position: absolute; bottom: 0; left: 0;">
+                                            
+                                            <h3 class="text-lg font-semibold text-black">Aurobinda Nanda</h3>
+                                            <h4 class="text-sm font-light text-black">Chief Executive Officer</h4>
+                                            <p class="text-xs mt-2 px-2 text-black">
+                                                Ex Co-Founder who drove Happiest Minds’ phenomenal growth from $0 to $200M.<br>
+                                                30+ years of transforming IT vision into market success. Away from the boardroom, this CEO runs marathons.
+                                            </p>
+                                            
+                                            <!-- LinkedIn SVG Icon -->
+                                            <div class="mt-3">
+                                                <a href="#" target="_blank" class="inline-block p-2 bg-white/30 rounded-full">
+                                                    <svg role="img" width="24" height="24" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
+                                                        <title>LinkedIn</title>
+                                                        <path d="M22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0ZM7.12 20.5H3.56V9H7.1v11.5Zm-1.79-13c-1.14 0-1.84-.75-1.84-1.71s.72-1.72 1.87-1.72S7.22 4 7.22 4.92c0 .96-.69 1.71-1.89 1.71ZM20.5 20.5h-3.56v-5.4c0-1.33-.48-2.23-1.69-2.23-.92 0-1.47.62-1.72 1.23-.08.22-.1.51-.1.8v5.6H9.86s.05-9.08 0-10h3.56v1.42c.47-.72 1.31-1.75 3.18-1.75 2.33 0 4.09 1.5 4.09 4.74v5.6Z"/>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                
+                                <!--  INLINE CSS FIX FOR SLIDING EFFECT -->
+                                <style>
+                                    .group:hover div.absolute {
+                                        transform: translateY(0) !important; /* Slides up */
+                                    }
+                                </style>
+                       </div>
+                  </section>
+    
+        <div class="flex flex-col items-start justify-center text-left px-6 py-8">
+          <h2 class="text-2xl lg:text-3xl md:text-4xl font-bold text-white leading-tight tracking-tight">
+              Their vision for AppHelix?
+          </h2>
+          <p class="mt-4 text-4xl lg:text-3xl md:text-2xl text-blue-400 max-w-3xl leading-snug">
+            A company that doesn’t just deliver great tech—but helps businesses rethink what’s possible.
+        </p>
+        </br>
+        
+      </div>
+      <!--see what we do container-->
+      <div class="bg-[#1F2025] flex items-center justify-center m-6 px-4">
+        <div class="bg-[#050717] w-full max-w-screen-md min-h-[290px] sm:min-h-[250px] h-auto px-6 sm:px-16 py-10 rounded-xl shadow-md flex flex-col sm:flex-row justify-between items-center text-white border border-white">
+            <!-- Left Section: Heading -->
+            <div class="flex-1 text-center sm:text-left mb-6 sm:mb-0">
+                <h3 class="text-2xl sm:text-3xl font-semibold text-[#FEFEFE] leading-snug">
+                    Let’s Write the Next Chapter Together
+                </h3>
+            </div>
+    
+            <!-- Right Section: Button -->
+            <div class="w-full sm:w-auto text-center"
+            style="padding: 80px;
+            text-align: right;">
+                <a href="#" class="bg-[#557CFA] text-white py-3 px-10 text-lg rounded-lg w-full sm:w-auto hover:bg-white hover:text-slate-800 transition duration-300">
+                    See What We Do
+                </a>
+            </div></br>
+    
+        </div>
+    </div>
+  </div>
+ </div>
+              
+</main>
+  <!-- slider bar -->
+  <div class="bg-[#1F2025] text-white h-250 flex justify-center select-none items-center ">
+    <div class="container max-w-315 w-full h-full mx-auto px-6">
+      <div class="flex justify-between items-center mb-9">
+        <div>
+          <div class="flex items-center">
+            <div class="w-2 h-2 bg-[#557CFA] rounded-full animate-blink mr-2 "></div>
+            <span class=" text-sm font-semibold">Insights That Keep You Ahead</span>
+          </div>
+          <h1 class="text-4xl font-bold mt-2">What’s new?</h1>
+        </div>
+        <button class="border border-gray-500 text-sm px-4 py-2 rounded-2xl hover:bg-[#557CFA] transition">See all
+          articles</button>
+      </div>
+
+      <div id="slider" class="flex gap-6 overflow-x-auto w-full  scrollbar-hide">
+
+        <!-- Article Card 1 -->
+        <div class="bg-black rounded-lg shadow-lg w-sm flex-shrink-0">
+
+          <img src="images\programming-background-with-person-working-with-codes-computer-300x200.jpg"
+            class="w-full h-125 object-cover select-none rounded-t-lg bg-cover ">
+          <div class="p-7.5  bg-white">
+            <span class="text-xs uppercase tracking-wide text-gray-400">DEVOPS • PRAGMATISM • TECHNOLOGY</span>
+            <h2 class="text-lg text-slate-900 font-semibold mt-2">Software Design Done Right: The Power of
+              Implementation Blueprints</h2>
+            <p class="text-gray-400 text-sm mt-2">Software Design Done Right: The Power of Implementation Blueprints
+              Written by AppHelix Features
+              Your master guide to building production-grade software components. Build a microservice. Create a React
+              component. Design.</p><br>
+            <p class="text-gray-500 text-xs mt-3">APPHELIX FEATURES | JANUARY 1, 2025</p>
+          </div>
+        </div>
+        <div class="bg-black rounded-xl shadow-lg w-sm flex-shrink-0">
+          <img src="images\infinite-loop-artificial-intelligence-automation-e1735721496591-300x200.jpg"
+            class="w-full h-125 object-cover rounded-t-lg bg-cover">
+          <div class="p-7.5  bg-white">
+            <span class="text-xs uppercase tracking-wide text-gray-400">DEVOPS • PRAGMATISM • TECHNOLOGY</span>
+            <h2 class="text-lg text-slate-900 font-semibold mt-2">DevOps Without Dogma: The Case for Engineering Common
+              Sense</h2>
+            <p class="text-gray-400  text-sm mt-2">DevOps Without Dogma: The Case for Engineering Common world Sense
+              Written by AppHelix Features Share There is no software delivery without DevOps, and rightly so. But
+              here’s something we often forget. </p><br>
+            <p class="text-gray-500 text-xs mt-3">APPHELIX FEATURES | JANUARY 1, 2025</p>
+          </div>
+        </div>
+
+        <!-- Article Card 2 -->
+        <div class="bg-black rounded-lg shadow-lg w-sm flex-shrink-0">
+          <img src="images\person-standing-front-holographic-screen-embellished-with-futuristic-symbols-300x300.jpg"
+            class="w-full h-125 object-cover rounded-t-lg bg-cover">
+          <div class="p-7.5 bg-white">
+            <span class="text-xs uppercase tracking-wide text-gray-400">DEVOPS • PRAGMATISM • TECHNOLOGY</span>
+            <h2 class="text-lg text-slate-900 font-semibold mt-2">Engineering with Impact: The Consultant Engineer
+              Mindset</h2>
+            <p class="text-gray-400 text-sm mt-2">Engineering with Impact: The Consultant Engineer Mindset Written by
+              AppHelix Features Share The Missing Piece Companies aren’t just looking for technical expertise anymore.
+              They need partners who can spot hidden.</p><br>
+            <p class="text-gray-500 text-xs mt-3">APPHELIX FEATURES | JANUARY 1, 2025</p>
+          </div>
+        </div>
+
+        <!-- Article Card 3 -->
+        <div class="bg-black rounded-lg shadow-lg w-sm flex-shrink-0">
+          <img
+            src="images\touch-future-interface-technology-future-user-experience-new-technology-bigdata-business-process-strategy-digital-transformation-change-management-creating-innovative-technologies-300x.jpg"
+            class="w-full h-125 object-cover rounded-t-lg bg-cover">
+          <div class="p-7.5 bg-white">
+            <span class="text-xs uppercase tracking-wide text-gray-400">DEVOPS • PRAGMATISM • TECHNOLOGY</span>
+            <h2 class="text-lg text-slate-900 font-semibold mt-2">The Messy Truth About Gen AI in Production: Field
+              Notes from Reality</h2>
+            <p class="text-gray-400 text-sm mt-2">The Messy Truth About Gen-AI in Production: Field Notes from Reality
+              Written by AppHelix Features Share Why your AI strategy might be take solving word the wrong problem My
+              ChatGPT journey began now</p><br>
+            <p class="text-gray-500 text-xs mt-3">APPHELIX FEATURES | JANUARY 1, 2025</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Pagination Dots -->
+      <!-- <div class="flex justify-center mt-6 space-x-2">
+        <span class="dot w-3 h-3 bg-gray-500 rounded-full cursor-pointer"></span>
+        <span class="dot w-3 h-3 bg-gray-500 rounded-full cursor-pointer"></span>
+        <span class="dot w-3 h-3 bg-gray-500 rounded-full cursor-pointer"></span>
+        <span class="dot w-3 h-3 bg-gray-500 rounded-full cursor-pointer"></span>
+      </div> -->
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class=" flex justify-center item-center mt-20 ">
+    <div class="bg-[#557CFA] max-w-300 w-full text-white px-5 rounded-t-2xl  pt-10">
+      <div class=" bg-[#050717] max-w-6xl mx-auto rounded-t-2xl px-6">
+        <div class=" p-8 rounded-lg">
+          <div class="grid md:grid-cols-2 gap-8">
+            <!-- Quick Links -->
+            <div>
+              <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="hover:underline">Home</a></li>
+                <li><a href="#" class="hover:underline">About</a></li>
+                <li><a href="#" class="hover:underline">Services</a></li>
+                <li><a href="#" class="hover:underline">Careers</a></li>
+                <li><a href="#" class="hover:underline">Blogs</a></li>
+                <li><a href="#" class="hover:underline">Contact Us</a></li>
+              </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+              <h3 class="text-lg font-semibold mb-4">Contact</h3>
+              <p class="font-semibold">AppHelix Technologies Private Limited</p>
+              <p class="mt-2 text-sm text-gray-300">
+                9th Floor, WeWork Latitude, RMZ Latitude Commercial,<br>
+                Bellary Road, Hebbal, Bengaluru, Karnataka, India - 560024
+              </p>
+              <p class="mt-4"><strong>Email:</strong> <a href="mailto:info@apphelix.ai"
+                  class="text-blue-300 hover:underline">info@apphelix.ai</a></p>
+              <p class="mt-1"><strong>Phone:</strong> <a href="tel:+917975819939"
+                  class="text-blue-300 hover:underline">+91 797 581 9939</a></p>
+
+              <!-- Social Icons -->
+              <div class="mt-4 flex space-x-3">
+                <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-[#557CFA]">
+                  <svg class="w-5 h-5 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <title>linkedin</title>
+                    <path
+                      d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" />
+                  </svg>
+                </a>
+                <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-[#557CFA]">
+                  <svg class="w-5 h-5 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <title>instagram</title>
+                    <path
+                      d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
+                  </svg>
+                </a>
+                <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-[#557CFA]">
+                  <svg class="w-5 h-5 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <title>facebook</title>
+                    <path
+                      d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="mt-6 text-center text-gray-400 text-sm border-t border-gray-700 pt-4">
+          <div class="flex justify-between items-center max-w-5xl mx-auto px-4">
+            <a href="#" class="hover:underline">Terms and Conditions</a>
+            <p>© 2025 AppHelix Technologies. All Rights Reserved.</p>
+            <a href="#" class="hover:underline">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
