@@ -13,7 +13,48 @@
     .scrollbar-hide::-webkit-scrollbar {
       display: none;
     }
+    .btn {
+      position: relative;
+      overflow: hidden;
+      transition: color 0.3s ease-out;
+      background: #557CFA;
+      color: white;
+      border: 2px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
+    .btn::after {
+      content: "";
+      position: absolute;
+      top: var(--y);
+      left: var(--x);
+      width: 200%;
+      height: 200%;
+      background: white;
+      transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+      border-radius: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0;
+      z-index: 0;
+    }
+
+    .btn:hover::after {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+
+
+    .btn span {
+      position: relative;
+      z-index: 10;
+      transition: color 0.3s ease-out;
+    }
+
+    .btn:hover span {
+      color: black;
+    }
     
 
     @keyframes appear {
@@ -270,9 +311,9 @@
 
             </div>
 
-            <a href="#"
-              class="inline-block mt-6 bg-[#557CFA] text-white py-2 px-6 rounded-2xl hover:bg-white hover:text-slate-800 transition duration-300">
-              About Us
+            <a href="#" id="hover-btn"
+              class=" btn inline-block mt-6 bg-[#557CFA] text-black py-2 px-6 rounded-2xl hover:bg-white hover:text-slate-800 ">
+              <span>About Us</span>
             </a>
           </div>
         </div>
@@ -570,7 +611,7 @@
         <p class="mb-6">Experience it first-hand.</p>
       </div>
       <div class=" text-center">
-        <a href="contact.html"
+        <a href="contact.html" 
           class="bg-[#557CFA] text-white py-3 px-14 rounded-xl hover:bg-white hover:text-slate-800 transition duration-300 ">Start
           a conversation</a>
       </div>
