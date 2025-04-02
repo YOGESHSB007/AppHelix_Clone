@@ -65,7 +65,15 @@ function revealOnScroll() {
         }
     }
 }
+const accordionItems = document.querySelectorAll('.accordion-item');
 
+    accordionItems.forEach(item => {
+        item.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                item.dispatchEvent(new Event('mouseover'));
+            }
+        });
+    });
 window.addEventListener('scroll', revealOnScroll);
 revealOnScroll(); // Trigger on initial load
 adjustLayout();

@@ -55,6 +55,52 @@
             opacity: 1;
             transform: translateY(0);
       }
+      .image-accordion {
+    display: flex;
+    width: 100%;
+    height: 400px; /* Adjust as needed */
+}
+
+.accordion-item {
+    flex: 1 1 0%;
+    background-size: cover;
+    background-position: center;
+    transition: flex 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.accordion-item:hover {
+    flex: 3 1 0%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.accordion-item:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-inner {
+    text-align: center;
+    padding: 20px;
+}
+
+.overlay-inner h2 {
+    margin-bottom: 10px;
+}
     
   </style>
   <title>AppHelix Technologies Private Limited &#x2d; Impactful Engineering</title>
@@ -247,36 +293,35 @@
     
    <!-- Start a conversation container -->
   <!--both for flex col and row-->
-  <div style="display: flex; flex-direction: column; width: 100%; max-width: 1280px;">
-    <div style="display: grid; gap: 10px;" class="responsive-flex">
-        <div style="position: relative; height: 384px; background-size: cover; background-position: center; transition: all 0.6s ease-in-out; background-image: url('https://apphelix.ai/wp-content/uploads/2024/12/3747425-scaled.jpg');"
-             onmouseover="showOverlay(this)" onmouseout="hideOverlay(this)">
-            <div class="overlay" style="position: absolute; inset: 0; background-color: rgba(0, 0, 0, 0.5); display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 24px; color: white; opacity: 0; transform: translateY(-100%); transition: opacity 0.3s, transform 0.6s;">
-                <h2 style="font-size: 24px; font-weight: bold; margin-bottom: 8px;">Growth with Purpose</h2>
+  <div class="image-accordion">
+    <div class="accordion-item" style="background-image: url('https://apphelix.ai/wp-content/uploads/2024/12/3747425-scaled.jpg');">
+        <div class="overlay">
+            <div class="overlay-inner">
+                <h2>Growth with Purpose</h2>
                 <p>Advance your career with opportunities that challenge and empower you</p>
             </div>
         </div>
-
-        <div style="position: relative; height: 384px; background-size: cover; background-position: center; transition: all 0.6s ease-in-out; background-image: url('https://apphelix.ai/wp-content/uploads/2024/12/inflammatory-dna-damage-genetic-disorder-molecular-structure-scaled.jpg');"
-             onmouseover="showOverlay(this)" onmouseout="hideOverlay(this)">
-            <div class="overlay" style="position: absolute; inset: 0; background-color: rgba(0, 0, 0, 0.5); display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 24px; color: white; opacity: 0; transform: translateY(-100%); transition: opacity 0.3s, transform 0.6s;">
-                <h2 style="font-size: 24px; font-weight: bold; margin-bottom: 8px;">Innovate Fearlessly</h2>
+    </div>
+    <div class="accordion-item" style="background-image: url('https://apphelix.ai/wp-content/uploads/2024/12/inflammatory-dna-damage-genetic-disorder-molecular-structure-scaled.jpg');">
+        <div class="overlay">
+            <div class="overlay-inner">
+                <h2>Innovate Fearlessly</h2>
                 <p>Work on cutting-edge projects in Generative AI, cloud, and product engineering</p>
             </div>
         </div>
-
-        <div style="position: relative; height: 384px; background-size: cover; background-position: center; transition: all 0.6s ease-in-out; background-image: url('https://apphelix.ai/wp-content/uploads/2024/12/52-scaled.jpg');"
-             onmouseover="showOverlay(this)" onmouseout="hideOverlay(this)">
-            <div class="overlay" style="position: absolute; inset: 0; background-color: rgba(0, 0, 0, 0.5); display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 24px; color: white; opacity: 0; transform: translateY(-100%); transition: opacity 0.3s, transform 0.6s;">
-                <h2 style="font-size: 24px; font-weight: bold; margin-bottom: 8px;">Collaborate Globally</h2>
+    </div>
+    <div class="accordion-item" style="background-image: url('https://apphelix.ai/wp-content/uploads/2024/12/52-scaled.jpg');">
+        <div class="overlay">
+            <div class="overlay-inner">
+                <h2>Collaborate Globally</h2>
                 <p>Join a network of expert engineers and industry leaders solving complex problems together</p>
             </div>
         </div>
-
-        <div style="position: relative; height: 384px; background-size: cover; background-position: center; transition: all 0.6s ease-in-out; background-image: url('https://apphelix.ai/wp-content/uploads/2024/11/32-1.png');"
-             onmouseover="showOverlay(this)" onmouseout="hideOverlay(this)">
-            <div class="overlay" style="position: absolute; inset: 0; background-color: rgba(0, 0, 0, 0.5); display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 24px; color: white; opacity: 0; transform: translateY(-100%); transition: opacity 0.3s, transform 0.6s;">
-                <h2 style="font-size: 24px; font-weight: bold; margin-bottom: 8px;">Leave a Legacy</h2>
+    </div>
+    <div class="accordion-item" style="background-image: url('https://apphelix.ai/wp-content/uploads/2024/11/32-1.png');">
+        <div class="overlay">
+            <div class="overlay-inner">
+                <h2>Leave a Legacy</h2>
                 <p>Deliver mission-critical solutions that create real-world impact across industries</p>
             </div>
         </div>
