@@ -127,49 +127,57 @@
     </nav>
   </header>
   <!-- body -->
-  <main class="flex flex-col  justify-center items-center mx-3.5">
-    <!-- First container --> <style>
+  <main class="flex flex-col  justify-center items-center mx-3.5 sm:text-left md:max-xl:flex lg:max-xl:flex lg:max-xl:gap-0 flex-col-1 md:flex-row lg:flex-row gap-0">
+    <!-- First container --> 
+            <style>
                   ::selection {
                       background-color: orange;
                       color: white;
                   }
               </style>
-   <div class="bg-[#0B0D1A] text-white">
-    <div class="relative bg-[url('./img_src/Careers-Workplace-Built-1-Dark.png')] bg-cover bg-center bg-no-repeat max-w-7xl mx-auto px-6 py-16 text-center">
-
-        <!-- Header Section -->
-        <div class="mb-6">
-            <h2 class="text-5xl font-bold leading-tight text-[#E5E7EB]">Engineering Impact<br> Delivers Growth.</h2>
-            <h6 class="text-lg text-[#9CA3AF] mt-2">More than deliverables, we produce transformative experiences.</h6>
-        </div>
-        
-        <!-- Content Section -->
-         <div class="flex flex-col items-center justify-center">
-        <div class="flex flex-row md:flex-row items-start justify-between gap-6 max-w-[1024px] mx-auto px-4"
-        style="padding: 75px;;">
-          <!-- Left Section -->
-          <div class="md:w-1/3">
-              <h2 class="text-3xl font-bold text-white leading-tight">
+        <div class="bg-[#1F2025] max-w-300 w-full text-white px-8 pt-0 ">
+         <div class="flex flex-col text-center sm:text-left md:flex-row gap-0 bg-cover bg-no-repeat bg-center " style="background-image: url(./img_src/image.png);opacity:0.2;">
+          <div class="flex flex-col items-center justify-center w-full max-w-300 px-6 py-12">
+            <h1 class="text-5xl font-bold text-white">
+              <span class=" text-white px-2 py-1 rounded">Engineering Impact</span><br>
+              Delivers Growth.
+            </h1>
+            <p class="text-lg text-gray-300 mt-2">More than deliverables, we produce transformative experiences.</p>
+          </div>
+         </div>
+          <!-- Content Section -->
+           <!--right section-->
+         <div class="max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-12  items-center">
+          <div class="text-center sm:text-left md:max-xl:flex lg:max-xl:flex lg:max-xl:gap-0">
+            <div class="flex flex-col  justify-center items-center ">
+            <div class="flex flex-col md:flex-row items-start gap-6 max-w-[1024px] mx-auto px-4 py-20">
+              <div class="md:w-2/3">
+                <h2 class="text-3xl font-bold text-white leading-tight align-text-top"style="text-align: left;padding-top: -100px;">
                   What We Do <br class="hidden md:inline"><br> Goes Beyond Code
-              </h2><br>
+                </h2>
+                <br>
+              </div>
+              </div>
+            </div>
           </div>
-      
-          <!-- Right Section -->
-          <div class="flex flex-row md:flex-row items-start justify-between gap-6 max-w-[1024px] mx-auto px-4">
-          <div class="md:w-2/3 text-gray-300">
-              <p class="text-lg leading-relaxed">
-                  We don't just solve problems—we<br> create possibilities. Every service we <br>offer combines sharp 
-                  technical expertise<br> with an unwavering focus<br> on your goals. We take the time to <br>deeply understand 
-                  your business<br> vision, then build quickly and reliably<br> without premium costs. Because for <br>us, 
-                  success isn't just about launching <br>a product—it's about seeing it thrive.
-              </p>
-          </div>
-      </div>
+              <!--left section-->
+             
+            <div class="flex flex-cols-1 md:flex-rows-2 md:flex-rows-12 gap-6 mb-1"
+              style="text-align: left;">
+              <div class="md:w-1/3 text-gray-300 md:flex-row-1 md:flex-rows-2 md:flex-rows-12 gap-6 mb-1">
+                <p class="text-lg leading-relaxed text-right justify-right  ">
+                  We don't just solve problems—we create possibilities. Every service we offer combines sharp 
+                  technical expertise with an unwavering focus on your goals. We take the time to deeply understand 
+                  your business vision, then build quickly and reliably without premium costs. Because for us, 
+                  success isn't just about launching a product—it's about seeing it thrive.
+                </p>
+              </div>
+            </div>
     </div>
         <!-- Features Section -->
          <!--card1-->
-         
-        <div class="grid md:grid-cols-3 gap-6 px-6 md:px-20 "style="background-color: #1A1A1D;">
+      
+        <div class="grid md:grid-cols-3 gap-6 px-6 md:px-20 mt-6  "style="background-color: #1A1A1D;">
           <div class="bg-[#050717]    p-6 rounded-2xl shadow-[0px_0px_4px_3px_#151E44] hover:shadow-[3px_3px_5px_-3px_#7392f5]">
             <img class="w-11 mb-4 translate-y-0 hover:-translate-y-2 transition-transform duration-500 ease-in-out" src="https://apphelix.ai/wp-content/uploads/2024/12/Sound-Recognition-Search-Streamline-Sharp-1.svg" alt="no">
             <h2 class="text-xl font-semibold flex items-center gap-2 mb-1"> Understand before Building</h2>
@@ -187,182 +195,146 @@
             <h2 class="text-xl font-semibold flex items-center gap-2"> Results Over Everything</h2>
             <p class="mt-2 text-gray-300">If it doesn’t drive measurable impact, it doesn’t leave our desk.</p>
           </div>
-          <div class="max-w-5xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-    
-          
-        
+       
         </div>
-        
         </div>
+      </div>
+    </div>
     <div class="bg-[#1F2025] max-w-300 w-full text-white px-8 pt-16 ">
-      <!-- second container -->
+    </div>
+      <!-- second container (our core services) -->
       
       <div class="max-w-900 w-full bg-[#050717] shadow-2xl text-white px-60">
         <div class="flex flex-col items-center justify-center py-12">
-          <h2 class="font-bold mb-4 text-[10rem] font-serif leading-tight">Our Core Services</h2>
+          <h2 class="font-bold mb-4 text-5xl font-serif leading-tight">Our Core Services</h2>
 
             <p class="text-xl text-gray-300 text-center">We don’t just execute. We challenge assumptions, rethink<br> the obvious, and redefine what’s possible.</p>
         </div>
-    </div>
-        <div style="background-color: #020617; padding: 48px 24px; max-width: 100%;">
-          <div style="
-              display: grid; 
-              grid-template-columns: repeat(4, 1fr); 
-              grid-template-rows: repeat(2, 1fr);
-              gap: 0px;
-              overflow: hidden;
-              border-radius: 20px;
-              border: solid 1px #17193A;
-              backdrop-filter: blur(50px);
-              box-shadow: 20px 20px 20px rgba(192, 188, 188, 0.5);
-              margin-top: 0px;
-              padding: 10px;
-          " class="grid-container">
-        
-            
-            <div style="background-color: #050717; padding: 24px; border: 1px solid #151E44; transition: box-shadow 0.3s;">
-              <img class="w-11 mb-4 transition-transform duration-500 ease-in-out hover:-translate-y-2" src="https://apphelix.ai/wp-content/uploads/2024/11/Ai-Chip-Spark-Streamline-Core.svg" alt="no">
-                <h2 style="font-size: 20px; font-weight: 600; display: flex; align-items: center; gap: 8px;">GenAI Native</h2>
-                <p style="margin-top: 8px; color: #d1d5db;">GenAI isn't just part of what we do—it’s how we think...</p>
-            </div>
-    
-            <div style="background-color: #050717; padding: 24px; border: 1px solid #151E44; transition: box-shadow 0.3s;">
-              <img class="w-11 mb-4 transition-transform duration-500 ease-in-out hover:-translate-y-2" src="https://apphelix.ai/wp-content/uploads/2024/11/Ai-Chip-Spark-Streamline-Core.svg" alt="no">
-                <h2 style="font-size: 20px; font-weight: 600; display: flex; align-items: center; gap: 8px;">Next-Gen Product Engineering</h2>
-                <p style="margin-top: 8px; color: #d1d5db;">Scalable architectures. Automated testing...</p>
-            </div>
-    
-            <div style="background-color: #050717; padding: 24px; border: 1px solid #151E44; transition: box-shadow 0.3s;">
-              <img class="w-11 mb-4 transition-transform duration-500 ease-in-out hover:-translate-y-2" src="https://apphelix.ai/wp-content/uploads/2024/11/Ai-Chip-Spark-Streamline-Core.svg" alt="no">
-                <h2 style="font-size: 20px; font-weight: 600; display: flex; align-items: center; gap: 8px;">Mobile and Web App Development</h2>
-                <p style="margin-top: 8px; color: #d1d5db;">Slick user experiences? We've got you covered...</p>
-            </div>
-    
-            <div style="background-color: #050717; padding: 24px; border: 1px solid #151E44; transition: box-shadow 0.3s;">
-            <img class="w-11 mb-4 transition-transform duration-500 ease-in-out hover:-translate-y-2" src="https://apphelix.ai/wp-content/uploads/2024/11/Ai-Chip-Spark-Streamline-Core.svg" alt="no">
-                <h2 style="font-size: 20px; font-weight: 600; display: flex; align-items: center; gap: 8px;">Cloud, SRE, & DevOps</h2>
-                <p style="margin-top: 8px; color: #d1d5db;">Zero-downtime deployments. Resilient infrastructure...</p>
-            </div>
-    
-            <div style="background-color: #050717; padding: 24px; border: 1px solid #151E44; transition: box-shadow 0.3s;">
-              <img class="w-11 mb-4 transition-transform duration-500 ease-in-out hover:-translate-y-2" src="https://apphelix.ai/wp-content/uploads/2024/11/Ai-Chip-Spark-Streamline-Core.svg" alt="no">
-                <h2 style="font-size: 20px; font-weight: 600; display: flex; align-items: center; gap: 8px;">Modernization & Integration</h2>
-                <p style="margin-top: 8px; color: #d1d5db;">Legacy systems? We bring them into the future...</p>
-            </div>
-    
-            <div style="background-color: #050717; padding: 24px; border: 1px solid #151E44; transition: box-shadow 0.3s;">
-              <img class="w-11 mb-4 transition-transform duration-500 ease-in-out hover:-translate-y-2" src="https://apphelix.ai/wp-content/uploads/2024/11/Ai-Chip-Spark-Streamline-Core.svg" alt="no">
-                <h2 style="font-size: 20px; font-weight: 600; display: flex; align-items: center; gap: 8px;">Data & Analytics</h2>
-                <p style="margin-top: 8px; color: #d1d5db;">Turn data into intelligence. From pipelines to predictive analytics...</p>
-            </div>
-    
-            <div style="background-color: #050717; padding: 24px; border: 1px solid #151E44; transition: box-shadow 0.3s;">
-              <img class="w-11 mb-4 transition-transform duration-500 ease-in-out hover:-translate-y-2" src="https://apphelix.ai/wp-content/uploads/2024/11/Ai-Chip-Spark-Streamline-Core.svg" alt="no">
-                <h2 style="font-size: 20px; font-weight: 600; display: flex; align-items: center; gap: 8px;">Data & Analytics</h2>
-                <p style="margin-top: 8px; color: #d1d5db;">Turn data into intelligence. From pipelines to predictive analytics...</p>
-            </div>
-           <div style="background-color: #050717; padding: 24px; border: 1px solid #151E44; transition: box-shadow 0.3s;">
-            <img class="w-11 mb-4 transition-transform duration-500 ease-in-out hover:-translate-y-2" src="https://apphelix.ai/wp-content/uploads/2024/11/Ai-Chip-Spark-Streamline-Core.svg" alt="no">
-                <h2 style="font-size: 20px; font-weight: 600; display: flex; align-items: center; gap: 8px;">Data & Analytics</h2>
-                <p style="margin-top: 8px; color: #d1d5db;">Turn data into intelligence. From pipelines to predictive analytics...</p>
-            </div>
-    
+   
+          <div class="bg-[#020617] p-10 max-w-full">
+            <div class="flex sm:flex-rows-1 md:flex-rows-2 lg:flex-rows-4 gap-6 w-1/2 mx-auto ">
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-rows-4 gap-0 overflow-hidden rounded-2xl border border-[#17193A] backdrop-filter blur-[50px] shadow-[20px_20px_20px_rgba(192,188,188,0.5)]">
+                  <div class="bg-[#050717] p-6 border border-[#151E44] transition-shadow duration-300 hover:shadow-lg">
+                      <img class="w-11 mb-4 transition-transform duration-500 ease-in-out hover:-translate-y-2" src="https://apphelix.ai/wp-content/uploads/2024/11/Ai-Chip-Spark-Streamline-Core.svg" alt="GenAI Native">
+                      <h2 class="text-xl font-semibold flex items-center gap-2">GenAI Native</h2>
+                      <p class="mt-2 text-gray-300">GenAI isn't just part of what we do—it’s how we think...</p>
+                  </div>
+          
+                  <div class="bg-[#050717] p-6 border border-[#151E44] transition-shadow duration-300 hover:shadow-lg">
+                      <img class="w-11 mb-4 transition-transform duration-500 ease-in-out hover:-translate-y-2" src="https://apphelix.ai/wp-content/uploads/2024/11/Ai-Chip-Spark-Streamline-Core.svg" alt="Next-Gen Product Engineering">
+                      <h2 class="text-xl font-semibold flex items-center gap-2">Next-Gen Product Engineering</h2>
+                      <p class="mt-2 text-gray-300">Scalable architectures. Automated testing...</p>
+                  </div>
+          
+                  <div class="bg-[#050717] p-6 border border-[#151E44] transition-shadow duration-300 hover:shadow-lg">
+                      <img class="w-11 mb-4 transition-transform duration-500 ease-in-out hover:-translate-y-2" src="https://apphelix.ai/wp-content/uploads/2024/11/Ai-Chip-Spark-Streamline-Core.svg" alt="Mobile and Web App Development">
+                      <h2 class="text-xl font-semibold flex items-center gap-2">Mobile and Web App Development</h2>
+                      <p class="mt-2 text-gray-300">Slick user experiences? We've got you covered...</p>
+                  </div>
+          
+                  <div class="bg-[#050717] p-6 border border-[#151E44] transition-shadow duration-300 hover:shadow-lg">
+                      <img class="w-11 mb-4 transition-transform duration-500 ease-in-out hover:-translate-y-2" src="https://apphelix.ai/wp-content/uploads/2024/11/Ai-Chip-Spark-Streamline-Core.svg" alt="Cloud, SRE, & DevOps">
+                      <h2 class="text-xl font-semibold flex items-center gap-2">Cloud, SRE, & DevOps</h2>
+                      <p class="mt-2 text-gray-300">Zero-downtime deployments. Resilient infrastructure...</p>
+                  </div>
+          
+                  <div class="bg-[#050717] p-6 border border-[#151E44] transition-shadow duration-300 hover:shadow-lg">
+                      <img class="w-11 mb-4 transition-transform duration-500 ease-in-out hover:-translate-y-2" src="https://apphelix.ai/wp-content/uploads/2024/11/Ai-Chip-Spark-Streamline-Core.svg" alt="Modernization & Integration">
+                      <h2 class="text-xl font-semibold flex items-center gap-2">Modernization & Integration</h2>
+                      <p class="mt-2 text-gray-300">Legacy systems? We bring them into the future...</p>
+                  </div>
+          
+                  <div class="bg-[#050717] p-6 border border-[#151E44] transition-shadow duration-300 hover:shadow-lg">
+                      <img class="w-11 mb-4 transition-transform duration-500 ease-in-out hover:-translate-y-2" src="https://apphelix.ai/wp-content/uploads/2024/11/Ai-Chip-Spark-Streamline-Core.svg" alt="Data & Analytics">
+                      <h2 class="text-xl font-semibold flex items-center gap-2">Data & Analytics</h2>
+                      <p class="mt-2 text-gray-300">Turn data into intelligence. From pipelines to predictive analytics...</p>
+                  </div>
+          
+                  <div class="bg-[#050717] p-6 border border-[#151E44] transition-shadow duration-300 hover:shadow-lg">
+                      <img class="w-11 mb-4 transition-transform duration-500 ease-in-out hover:-translate-y-2" src="https://apphelix.ai/wp-content/uploads/2024/11/Ai-Chip-Spark-Streamline-Core.svg" alt="Data & Analytics">
+                      <h2 class="text-xl font-semibold flex items-center gap-2">Data & Analytics</h2>
+                      <p class="mt-2 text-gray-300">Turn data into intelligence. From pipelines to predictive analytics...</p>
+                  </div>
+          
+                  <div class="bg-[#050717] p-6 border border-[#151E44] transition-shadow duration-300 hover:shadow-lg">
+                      <img class="w-11 mb-4 transition-transform duration-500 ease-in-out hover:-translate-y-2" src="https://apphelix.ai/wp-content/uploads/2024/11/Ai-Chip-Spark-Streamline-Core.svg" alt="Data & Analytics">
+                      <h2 class="text-xl font-semibold flex items-center gap-2">Data & Analytics</h2>
+                      <p class="mt-2 text-gray-300">Turn data into intelligence. From pipelines to predictive analytics...</p>
+                  </div>
         </div>
-    </div>
-    
-    </div><br><span><br><br></span>
-    
-      
-      <!-- Fourth container Still has to be done  -->
-      
-
-    </div>
-    <div class="flex flex-col items-center w-full mt-[130px]">
-      <div class="text-left w-full max-w-300 px-6">
-          <h2 class="text-4xl font-bold "
-          style="text-align: left;">Why Choose Us?</h2>
+        </div>
       </div>
-      <div class="text-left w-full max-w-[300px] px-6 mt-4">
-        <h2 class="text-xl leading-relaxed text-gray-300">
-            We don’t just execute. We challenge assumptions, rethink the obvious, and <br> redefine what’s possible.
-        </h2>
-    </div>
-    
   </div>
-  <div style="display: flex; justify-content: space-between; gap: 20px; background-color: #1F2025 ; padding: 20px;">
-    <div style="flex: 1; color: white;">
-        <h3 style="color: #3B82F6; font-size: 14px; font-weight: semibold; margin-bottom: 8%; position: relative; display: inline-block; transition: color 0.3s ease;" 
-            onmouseover="this.style.color='white'" 
-            onmouseout="this.style.color='#3B82F6'">
-            The AppHelix Way
-            <span style="position: absolute; top: -3px; right: 0; width: 0%; height: 2px; background: #3B82F6; transition: width 0.3s ease; display: block;"></span>
-        </h3>
-        <p style="font-size: 14px; color: #aeb0b4;">Strategic. Collaborative. Scalable</p>
-    </div>
-    <div style="flex: 1; color: white;">
-      <h3 style="color: #3B82F6; font-size: 14px; font-weight: semibold; margin-bottom: 8%; position: relative; display: inline-block; transition: color 0.3s ease;" 
-            onmouseover="this.style.color='white'" 
-            onmouseout="this.style.color='#3B82F6'">
-            A Seat at the Table
-            <span style="position: absolute; top: -3px; right: 0; width: 0%; height: 2px; background: #3B82F6; transition: width 0.3s ease; display: block;"></span>
-        </h3>
-        <p style="font-size: 14px; color: #aeb0b4;">Your success is our success, and we act like it</p>
-    </div>
-    <div style="flex: 1; color: white;">
-      <h3 style="color: #3B82F6; font-size: 14px; font-weight: semibold; margin-bottom: 8%; position: relative; display: inline-block; transition: color 0.3s ease;" 
-            onmouseover="this.style.color='white'" 
-            onmouseout="this.style.color='#3B82F6'">
-            Technical Mastery
-            <span style="position: absolute; top: -3px; right: 0; width: 0%; height: 2px; background: #3B82F6; transition: width 0.3s ease; display: block;"></span>
-        </h3>
-        <p style="font-size: 14px; color: #aeb0b4;">We take on challenges others shy away from — and solve them</p>
-    </div>
-    <div style="flex: 1; color: white;">
-      <h3 style="color: #3B82F6; font-size: 14px; font-weight: semibold; margin-bottom: 8%; position: relative; display: inline-block; transition: color 0.3s ease;"  
-            onmouseover="this.style.color='white'" 
-            onmouseout="this.style.color='#3B82F6'">
-            Keeping it Real
-            <span style="position: absolute; top: -3px; right: 0; width: 0%; height: 2px; background: #3B82F6; transition: width 0.3s ease; display: block;"></span>
-        </h3>
-        <p style="font-size: 14px; color: #aeb0b4;">Our work fits your business, your users and your goals</p>
-    </div>
-</div>
-
-<script>
-    document.querySelectorAll("h3").forEach(h3 => {
-        h3.addEventListener("mouseover", function() {
-            let line = this.querySelector("span");
-            line.style.width = "100%";
-            line.style.left = "0";
-        });
-        h3.addEventListener("mouseout", function() {
-            let line = this.querySelector("span");
-            line.style.width = "0";
-            line.style.left = "100%";
-        });
-    });
-</script>
-
+      <!-- 3rd conatiner -->
+      
+      <div class="bg-[#1F2025] max-w-300 w-full text-white px-14 pt-16 ">
+            <div class="flex flex-col sm:text-left  items-center w-full mt-4">
+              <div class="text-left w-full max-w-300 px-6">
+                  <h2 class="text-4xl font-bold "
+                  style="text-align: left;">Why Choose Us?</h2>
+              </div>
+              <div class="text-left w-full max-w-[300px] px-6 mt-4">
+                <h2 class="text-xl leading-relaxed text-gray-300">
+                    We don’t just execute. We challenge assumptions, rethink the obvious, and <br> redefine what’s possible.
+                </h2>
+            </div>
+          </div>
+          <div class="flex flex-cols sm:flex-rows-1 md:flex-row-2 lg:flex-rows-4 items-center w-full mt-4">
+            
+          <div style="display: flex; justify-content: space-between; gap: 20px; background-color: #1F2025 ; padding: 20px;">
+            <div style="flex: 1; color: white;">
+                <h3 style="color: #3B82F6; font-size: 14px; font-weight: semibold; margin-bottom: 8%; position: relative; display: inline-block; transition: color 0.3s ease;" 
+                    onmouseover="this.style.color='white'" 
+                    onmouseout="this.style.color='#3B82F6'">
+                    The AppHelix Way
+                    <span style="position: absolute; top: -3px; right: 0; width: 0%; height: 2px; background: #3B82F6; transition: width 0.3s ease; display: block;"></span>
+                </h3>
+                <p style="font-size: 14px; color: #aeb0b4;">Strategic. Collaborative. Scalable</p>
+            </div>
+            <div style="flex: 1; color: white;">
+              <h3 style="color: #3B82F6; font-size: 14px; font-weight: semibold; margin-bottom: 8%; position: relative; display: inline-block; transition: color 0.3s ease;" 
+                    onmouseover="this.style.color='white'" 
+                    onmouseout="this.style.color='#3B82F6'">
+                    A Seat at the Table
+                    <span style="position: absolute; top: -3px; right: 0; width: 0%; height: 2px; background: #3B82F6; transition: width 0.3s ease; display: block;"></span>
+                </h3>
+                <p style="font-size: 14px; color: #aeb0b4;">Your success is our success, and we act like it</p>
+            </div>
+            <div style="flex: 1; color: white;">
+              <h3 style="color: #3B82F6; font-size: 14px; font-weight: semibold; margin-bottom: 8%; position: relative; display: inline-block; transition: color 0.3s ease;" 
+                    onmouseover="this.style.color='white'" 
+                    onmouseout="this.style.color='#3B82F6'">
+                    Technical Mastery
+                    <span style="position: absolute; top: -3px; right: 0; width: 0%; height: 2px; background: #3B82F6; transition: width 0.3s ease; display: block;"></span>
+                </h3>
+                <p style="font-size: 14px; color: #aeb0b4;">We take on challenges others shy away from — and solve them</p>
+            </div>
+            <div style="flex: 1; color: white;">
+              <h3 style="color: #3B82F6; font-size: 14px; font-weight: semibold; margin-bottom: 8%; position: relative; display: inline-block; transition: color 0.3s ease;"  
+                    onmouseover="this.style.color='white'" 
+                    onmouseout="this.style.color='#3B82F6'">
+                    Keeping it Real
+                    <span style="position: absolute; top: -3px; right: 0; width: 0%; height: 2px; background: #3B82F6; transition: width 0.3s ease; display: block;"></span>
+                </h3>
+                <p style="font-size: 14px; color: #aeb0b4;">Our work fits your business, your users and your goals</p>
+            </div>
+        </div>
+       </div>
+      </div>
   </div>
    <!-- Start a conversation container -->
-   <div class="bg-[#1F2025] flex items-center m-6  justify-center ">
-
-    <div
-      class="bg-[#050717]  border-amber-50  px-8 pt-16 pb-12 rounded-2xl shadow-[0px_0px_4px_3px_#151E44] flex justify-center sm:flex-row flex-col  items-center max-w-240  text-white ">
+   <div class="bg-[#1F2025] flex flex-col sm:flex-col md:flex-row-2 lg:flex-rows-4 items-center m-6  justify-center  ">
+    <div class="bg-[#050717] border-amber-50  px-8 pt-16 pb-12 rounded-2xl shadow-[0px_0px_4px_3px_#151E44] flex justify-center sm:flex-row flex-col  items-center max-w-240  text-white ">
       <div class="w-3/5 flex flex-col justify-start">
-        <div class="flex mb-3 items-center">
-   <h1 class="text-4xl font-semibold mb-4">Let’s start building the future your business deserves</h1>
+        <div class="flex flex-col  mb-3 items-center">
+          <h1 class="text-2xl sm:text-4xl md:text-6xl lg:text-8xl font-semibold mb-2">Let’s start building the future your business deserves</h1>
         
         </div>
-        
-      </div>
-      <div class=" text-center">
-        <a href="#"
-          class="bg-[#557CFA] text-white py-3 px-14 rounded-xl hover:bg-white hover:text-slate-800 transition duration-300 ">Start
-          a conversation</a>
+        </div>
+        <div class="flex flex-col sm:flex-row text-center">
+          <a href="#" class="bg-[#557CFA] text-white py-3 px-14 rounded-xl hover:bg-white hover:text-slate-800 transition duration-300">Start a conversation</a>
       </div>
     </div>
-
   </div>
   </main>
   <!-- slider bar -->
@@ -385,7 +357,7 @@
         <!-- Article Card 1 -->
         <div class="bg-black rounded-lg shadow-lg w-sm flex-shrink-0">
 
-          <img src="./img_src/programming-background-with-person-working-with-codes-computer-300x200.jpg"
+          <img src="images\programming-background-with-person-working-with-codes-computer-300x200.jpg"
             class="w-full h-125 object-cover select-none rounded-t-lg bg-cover ">
           <div class="p-7.5  bg-white">
             <span class="text-xs uppercase tracking-wide text-gray-400">DEVOPS • PRAGMATISM • TECHNOLOGY</span>
@@ -399,7 +371,7 @@
           </div>
         </div>
         <div class="bg-black rounded-xl shadow-lg w-sm flex-shrink-0">
-          <img src="./img_src/person-standing-front-holographic-screen-embellished-with-futuristic-symbols-300x300.jpg"
+          <img src="images\infinite-loop-artificial-intelligence-automation-e1735721496591-300x200.jpg"
             class="w-full h-125 object-cover rounded-t-lg bg-cover">
           <div class="p-7.5  bg-white">
             <span class="text-xs uppercase tracking-wide text-gray-400">DEVOPS • PRAGMATISM • TECHNOLOGY</span>
@@ -414,7 +386,7 @@
 
         <!-- Article Card 2 -->
         <div class="bg-black rounded-lg shadow-lg w-sm flex-shrink-0">
-          <img src="./img_src/person-standing-front-holographic-screen-embellished-with-futuristic-symbols-300x300.jpg"
+          <img src="images\person-standing-front-holographic-screen-embellished-with-futuristic-symbols-300x300.jpg"
             class="w-full h-125 object-cover rounded-t-lg bg-cover">
           <div class="p-7.5 bg-white">
             <span class="text-xs uppercase tracking-wide text-gray-400">DEVOPS • PRAGMATISM • TECHNOLOGY</span>
@@ -430,7 +402,7 @@
         <!-- Article Card 3 -->
         <div class="bg-black rounded-lg shadow-lg w-sm flex-shrink-0">
           <img
-            src="./img_src/infinite-loop-artificial-intelligence-automation-e1735721496591-300x200.jpg"
+            src="images\touch-future-interface-technology-future-user-experience-new-technology-bigdata-business-process-strategy-digital-transformation-change-management-creating-innovative-technologies-300x.jpg"
             class="w-full h-125 object-cover rounded-t-lg bg-cover">
           <div class="p-7.5 bg-white">
             <span class="text-xs uppercase tracking-wide text-gray-400">DEVOPS • PRAGMATISM • TECHNOLOGY</span>
