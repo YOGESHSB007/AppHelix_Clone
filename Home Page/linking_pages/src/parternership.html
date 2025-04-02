@@ -1,0 +1,635 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+  <link href="./output.css" rel="stylesheet">
+  <style>
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+    .btn {
+      position: relative;
+      overflow: hidden;
+      transition: color 0.3s ease-out;
+      background: #557CFA;
+      color: white;
+      border: 2px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn::after {
+      content: "";
+      position: absolute;
+      top: var(--y);
+      left: var(--x);
+      width: 200%;
+      height: 200%;
+      background: white;
+      transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+      border-radius: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0;
+      z-index: 0;
+    }
+
+    .btn:hover::after {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+
+
+    .btn span {
+      position: relative;
+      z-index: 10;
+      transition: color 0.3s ease-out;
+    }
+
+    .btn:hover span {
+      color: black;
+    }
+    
+
+    @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    @keyframes appear1 {
+            from {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        #Box {
+            animation: appear 1.5s ease-out forwards;
+            animation-range: entry 0% ;
+            animation-timeline: view();
+        }
+        #Box1 {
+            animation: appear1 1.5s ease-out forwards;
+            animation-range: entry 0% ;
+            animation-timeline: view();
+        }
+
+        @keyframes appear2 {
+            from {
+                opacity: 1;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-once {
+            animation: appear2 1.5s ease-out forwards;
+        }
+
+
+
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+
+    .transulate-btn {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    #show-btn:hover+.transulate-btn {
+      transform: translateX(2px) rotate(45deg);
+    }
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .btn {
+      position: relative;
+      overflow: hidden;
+      transition: color 0.3s ease-out;
+      background: #557CFA;
+      color: white;
+      border: 2px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn::after {
+      content: "";
+      position: absolute;
+      top: var(--y);
+      left: var(--x);
+      width: 400%;
+      height: 400%;
+      background: white;
+      transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+      border-radius: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0;
+      z-index: 0;
+    }
+
+    .btn:hover::after {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+
+
+    .btn span {
+      position: relative;
+      z-index: 10;
+      transition: color 0.3s ease-out;
+    }
+
+    .btn:hover span {
+      color: black;
+    }
+  </style>
+  <title>AppHelix Technologies Private Limited &#x2d; Impactful Engineering</title>
+</head>
+
+<body class="bg-[#1F2025] font-RedHat">
+
+  <!-- header -->
+  <header class="flex justify-center items-center pb-8">
+    <nav class="w-full max-w-300 ">
+      <div class="flex justify-between items-center p-2.5">
+        <a class="w-75" href="Home.html">
+          <img src="https://apphelix.ai/wp-content/uploads/2024/11/AppHelix-Website-Logo-600X322-3-e1733559274148.png"
+            alt="noimg" srcset="">
+        </a>
+        <svg class="w-7 fill-white mr-5 md:hidden" id="clickToOpen" xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24">
+          <title>page-layout-sidebar-left</title>
+          <path d="M6,2H18A2,2 0 0,1 20,4V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V4A2,2 0 0,1 6,2M6,8V16H10V8H6Z" />
+        </svg>
+        <div class="hidden md:block w-3/5 ">
+          <div class="navbar text-xl flex justify-between text-[#7B8392]">
+            <!-- <div class="flex justify-center items-center "> -->
+
+            <a href="#about" id="blink" class=" hover:text-amber-50 ">About Us</a>
+            <!-- </div> -->
+            <a href="#services" id="blink" class="hover:text-amber-50">Services</a>
+            <a href="#careers" id="blink" class="hover:text-amber-50">Careers</a>
+            <a href="#partnerships" id="blink" class="hover:text-amber-50">Partnerships</a>
+            <a href="Blogs.html" id="blink" class="hover:text-amber-50">Blogs</a>
+            <a class="hover:text-amber-50" id="blink" href="contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+      <!-- <div id="overlay" class="fixed inset-0 bg-black/40 backdrop-blur-sm hidden z-50"> -->
+      <div
+        class="h-screen w-80 z-100 fixed top-0 bg-amber-50 transform -translate-x-520 transition-transform duration-1000 ease-in-out"
+        id="hiddensidebar">
+        <div class="flex justify-between items-center p-4">
+          <div class="text-2xl">Menu</div>
+          <button type="close" id="close"><svg id="close" class="w-7 cursor-pointer" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24">
+              <title>close-box-outline</title>
+              <path
+                d="M19,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M19,19H5V5H19V19M17,8.4L13.4,12L17,15.6L15.6,17L12,13.4L8.4,17L7,15.6L10.6,12L7,8.4L8.4,7L12,10.6L15.6,7L17,8.4Z" />
+            </svg></button>
+        </div>
+        <div class="mt-5">
+          <div class="h-12 flex items-center px-5 py-1.5 text-slate-400 ">
+            <h1>About Us</h1>
+
+          </div>
+          <hr class="h-px border-0 bg-gray-200">
+          <div class="h-12 flex items-center px-5 py-1.5 text-slate-400">
+            <h1>Services</h1>
+
+          </div>
+          <hr class="h-px border-0 bg-gray-200">
+          <div class="h-12 flex items-center px-5 py-1.5 text-slate-400">
+            <h1>Careers</h1>
+
+          </div>
+          <hr class="h-px border-0 bg-gray-200">
+          <div class="h-12 flex items-center px-5 py-1.5 text-slate-400">
+            <h1>Partnerships</h1>
+
+          </div>
+          <hr class="h-px border-0 bg-gray-200">
+          <div class="h-12 flex items-center px-5 py-1.5 text-slate-400">
+            <h1>Blogs</h1>
+
+          </div>
+          <hr class="h-px border-0 bg-gray-200">
+          <div class="h-12 flex items-center px-5 py-1.5 text-slate-400">
+            <h1>Contact</h1>
+
+          </div>
+          <hr class="h-px border-0 bg-gray-200">
+        </div>
+      </div>
+      <!-- </div> -->
+
+
+    </nav>
+  </header>
+  <!-- body -->
+  <main class="flex flex-col  justify-center items-center mx-3.5">
+    <!-- First container -->
+    <div class=" max-w-300 w-full bg-[#050717] rounded-2xl shadow-2xl text-white">
+      <div class="max-w-8xl mx-auto px-12 pt-12 pb-18">
+        <div>
+          <h1 class="text-5xl font-semibold mb-4 text-center ">Build Strategic Alliances</h1>
+          <p class="mb-8 text-xl  text-[#B6BBC5] font-medium text-center">Join forces with AppHelix to engineer transformative solutions. Together, we can solve complex<br> challenges that others can't—or won't.</p>
+          <div class="flex">
+            <div class="p-4 overflow-hidden rounded-3xl shadow-lg w-full max-w-4xl mx-auto">
+              <img class="w-full h-auto object-cover rounded-3xl" loading="lazy" decoding="async" 
+                   src="https://apphelix.ai/wp-content/uploads/2025/03/74-scaled.jpg" 
+                   alt=""
+                   srcset="https://apphelix.ai/wp-content/uploads/2025/03/74-scaled.jpg 2560w, 
+                           https://apphelix.ai/wp-content/uploads/2025/03/74-300x188.jpg 300w, 
+                           https://apphelix.ai/wp-content/uploads/2025/03/74-1024x640.jpg 1024w, 
+                           https://apphelix.ai/wp-content/uploads/2025/03/74-768x480.jpg 768w, 
+                           https://apphelix.ai/wp-content/uploads/2025/03/74-1536x960.jpg 1536w, 
+                           https://apphelix.ai/wp-content/uploads/2025/03/74-2048x1280.jpg 2048w, 
+                           https://apphelix.ai/wp-content/uploads/2025/03/74-896x560.jpg 896w, 
+                           https://apphelix.ai/wp-content/uploads/2025/03/74-600x375.jpg 600w"
+                   sizes="(max-width: 2560px) 100vw, 2560px"
+                   style="border-radius: 1.5rem; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);">
+          </div>
+        </div>
+        <div>
+          <h1 class="text-5xl font-extrabold mb-4 mt-5 text-center" style="color: blue;">The AppHelix Partner Ecosystem</h1>
+            <p class="mb-8 text-xl text-gray-400 font-medium text-center">
+                Our approach to partnerships reflects our core values: be transformative, be fearless, be kind. <br>
+                We believe in creating alliances that deliver exceptional value and impact for clients and partners alike.
+            </p>
+          <div class="grid md:grid-cols-3 gap-6 px-6 md:px-20 mt-6  "style="background-color:#050717;">
+            <div class="bg-[#050717]    p-6 rounded-2xl shadow-[0px_0px_4px_3px_#151E44] hover:shadow-[3px_3px_5px_-3px_#7392f5]">
+              <img class="w-11 mb-4 translate-y-0 hover:-translate-y-2 transition-transform duration-500 ease-in-out" src="https://apphelix.ai/wp-content/uploads/2024/12/Sound-Recognition-Search-Streamline-Sharp-1.svg" alt="no">
+              <h2 class="text-xl font-semibold flex items-center gap-2 mb-1"style="color: blue;">Business Referral Partners</h2>
+              <p class="mt-2 text-gray-300">Connect us with opportunities where our Consulting Engineers can deliver impactful solutions. We offer competitive referral programs that reward your trust with concrete benefits.</p>
+            </div>
+            <!--card2-->
+            <div class="bg-[#050717]   p-6 rounded-2xl shadow-[0px_0px_4px_3px_#151E44] hover:shadow-[3px_3px_5px_-3px_#7392f5]">
+              <img class="w-11 mb-4 translate-y-0 hover:-translate-y-2 transition-transform duration-500 ease-in-out" src="https://apphelix.ai/wp-content/uploads/2024/12/Street-Sign-Streamline-Sharp-1.svg" alt="no">
+              <h2 class="text-xl font-semibold flex items-center gap-2"style="color:blue;"> Technology Collaborators</h2>
+              <p class="mt-2 text-gray-300">Combine your specialized expertise with our engineering and consulting capabilities to create innovative solutions. Let’s jointly develop products and services that transform industries.</p>
+            </div>
+            <!--card3-->
+            <div class="bg-[#050717]   p-6 rounded-2xl shadow-[0px_0px_4px_3px_#151E44] hover:shadow-[3px_3px_5px_-3px_#7392f5]">
+              <img class="w-11 mb-4 translate-y-0 hover:-translate-y-2 transition-transform duration-500 ease-in-out" src="https://apphelix.ai/wp-content/uploads/2024/12/Graph-Dot-Streamline-Sharp-1.svg" alt="no">
+              <h2 class="text-xl font-semibold flex items-center gap-2"style="color:blue;"> Implementation Partners</h2>
+              <p class="mt-2 text-gray-300">Enhance your delivery capacity with our engineering excellence. Whether you need specialized expertise or scale, we can work as an extension of your team to deliver exceptional results.</p>
+            </div>
+          </div>
+        </div>
+            </div>
+          </div>
+        </div>
+<!--what we bring to table-->
+        <div class="flex items-center justify-center mb-3 mt-4">
+          <div class="w-2 h-2 bg-[#557CFA] rounded-full animate-blink mr-2"></div>
+          <h3 class="text-sm font-semibold text-[#FEFEFE]">What we bring to the table</h3>
+      </div>
+      <!-- Heading -->
+      <h2 class="text-6xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl 2xl:text-9xl font-bold text-blue-500 mt-2 mb-4">Why Partner With AppHelix?</h2>
+      </div>
+        <div class=" max-w-300 w-full bg-[#050717] rounded-2xl shadow-2xl text-white">
+        <div class="flex flex-col sm:flex-row gap-0 mt-8">
+          <div class="flex-1 bg-[#050717] p-6 border border-[#151E44] transition-shadow duration-300 hover:shadow-lg">
+              <img class="w-11 mb-4 transition-transform duration-500 ease-in-out hover:-translate-y-2" src="https://apphelix.ai/wp-content/uploads/2024/11/Ai-Chip-Spark-Streamline-Core.svg" alt="GenAI Native">
+              <h2 class="text-xl font-semibold flex items-center ">Deep Technical Expertise
+                </h2>
+              <p class="mt-2 text-gray-300">Our team brings 100+ years of combined enterprise solutions<br> experience across industries and technologies.</p>
+          </div>
+          <div class="flex-1 bg-[#050717] p-6 border border-[#151E44] transition-shadow duration-300 hover:shadow-lg">
+              <img class="w-11 mb-4 transition-transform duration-500 ease-in-out hover:-translate-y-2" src="https://apphelix.ai/wp-content/uploads/2024/11/Ai-Chip-Spark-Streamline-Core.svg" alt="Next-Gen Product Engineering">
+              <h2 class="text-xl font-semibold flex items-center ">Gen AI Mastery
+                </h2>
+              <p class="mt-2 text-gray-300">Built with GenAI at our core from day one, we bring cutting-edge <br>AI capabilities to every solution we create.</p>
+          </div>
+          <div class="flex-1 bg-[#050717] p-6 border border-[#151E44] transition-shadow duration-300 hover:shadow-lg">
+              <img class="w-11 mb-4 transition-transform duration-500 ease-in-out hover:-translate-y-2" src="https://apphelix.ai/wp-content/uploads/2024/11/Ai-Chip-Spark-Streamline-Core.svg" alt="Mobile and Web App Development">
+              <h2 class="text-xl font-semibold flex items-center ">Product Engineering DNA
+                </h2>
+              <p class="mt-2 text-gray-300">We bring the soul of a product company to services delivery, <br>focusing on outcomes rather than activities.</p>
+          </div>
+          <div class="flex-1 bg-[#050717] p-6 border border-[#151E44] transition-shadow duration-300 hover:shadow-lg">
+              <img class="w-11 mb-4 transition-transform duration-500 ease-in-out hover:-translate-y-2" src="https://apphelix.ai/wp-content/uploads/2024/11/Ai-Chip-Spark-Streamline-Core.svg" alt="Cloud Solutions">
+              <h2 class="text-xl font-semibold flex items-center ">Consulting Engineer Mindset
+                </h2>
+              <p class="mt-2 text-gray-300">Our unique approach combines technical mastery with<br> strategic business thinking to drive real transformation.</p>
+          </div>
+      </div>
+
+    </div>
+    </div>
+
+    <div class="bg-[#1F2025] max-w-300 w-full text-white px-8 pt-16 ">
+      <!-- second container  form-->
+      <div class="max-w-7xl   items-center">
+        <div>
+          <div class="flex items-center mb-3 "> 
+            <p class="text-lg w  font-semibold text-[#FEFEFE]">Let's Explore the Possibilities</p>
+          </div>
+          <div class="text-lg text-gray-400 font-semibold">Ready to discuss how we can join forces? Complete the form below, and our team will reach out to start the conversation.
+          </div>
+        </div>
+        </div>
+        <div class="mt-8 px-1 w-full">
+          <form class="grid gap-4 mt-5 px-3">
+              <div class="w-full">
+                  <div>
+                      <div class="flex items-center mb-4">
+                          <div class="w-full px-6">
+                              <form class="space-y-4 w-full">
+                                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
+                                      <div class="mb-3">
+                                          <label class="block text-gray-400 font-semibold mb-1">First Name <span class="text-red-500">*</span></label>
+                                          <input type="text" placeholder="Please enter your first name" class="w-full p-2 rounded-none bg-white text-slate-800 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                      </div>
+                                      <div class="mb-3">
+                                          <label class="block text-gray-400 font-semibold mb-1">Last Name <span class="text-red-500">*</span></label>
+                                          <input type="text" placeholder="Please enter your last name" class="w-full p-2 rounded-none bg-white text-slate-800 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                      </div>
+                                      <div class="sm:col-span-2 mb-3 w-full"> 
+                                        <label class="block text-gray-400 font-semibold mb-1">Organization <span class="text-red-500">*</span></label>
+                                        <input type="email" placeholder="Please enter your email" class="w-full p-2 rounded-none bg-white text-slate-800 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    </div><br><br>
+                                      <div class="mb-3">
+                                          <label class="block text-gray-400 font-semibold mb-1">Email <span class="text-red-500">*</span></label>
+                                          <input type="email" placeholder="Please enter your email" class="w-full p-2 rounded-none bg-white text-slate-800 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                      </div>
+                                      <div class="mb-3">
+                                          <label class="block text-gray-400 font-semibold mb-1">Confirm Email <span class="text-red-500">*</span></label>
+                                          <input type="email" placeholder="Please re-enter your email" class="w-full p-2 rounded-none bg-white text-slate-800 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                      </div>
+                                      <div class="sm:col-span-2 mb-3">
+                                          <label class="block text-gray-400 font-semibold mb-1">Message <span class="text-red-500">*</span></label>
+                                          <textarea placeholder="How may we be of assistance?" class="w-full p-2 rounded-none bg-white text-slate-800 h-40 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                                      </div><br>
+                                      <div class="sm:col-span-2 mb-3">
+                                          <button type="submit" class="bg-[#547CFF] text-white px-10 py-4 text-lg font-semibold rounded-none hover:bg-blue-500 transition duration-300 w-full">Submit</button>
+                                      </div>
+                                  </div>
+                              </form>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </form>
+      </div>
+      </div>
+      
+
+      
+      <!-- Fourth container Still has to be done  -->
+      <!-- <div class="#1F2025 flex justify-center w-full items-center mt-10">
+        <div class="bg-[#050717] rounded-xl p-8 w-full flex items-center gap-8 shadow-lg border border-gray-700">
+            
+            <div class="grid grid-cols-3 gap-4 relative">
+                
+                <div class="group w-20 h-20 bg-gray-700 flex items-center justify-center rounded-lg transition-transform duration-300 hover:translate-y-2 hover:-translate-y-2">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-10 h-10 opacity-80">
+                </div>
+                <div class="group w-20 h-20 bg-gray-700 flex items-center justify-center rounded-lg transition-transform duration-300 hover:translate-y-2 hover:-translate-y-2">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-10 h-10 opacity-80">
+                </div>
+                <div class="group w-20 h-20 bg-gray-700 flex items-center justify-center rounded-lg transition-transform duration-300 hover:translate-y-2 hover:-translate-y-2">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-10 h-10 opacity-80">
+                </div>
+                <div class="group w-20 h-20 bg-gray-700 flex items-center justify-center rounded-lg transition-transform duration-300 hover:translate-y-2 hover:-translate-y-2">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="w-10 h-10 opacity-80">
+                </div>
+                <div class="group w-20 h-20 bg-gray-700 flex items-center justify-center rounded-lg transition-transform duration-300 hover:translate-y-2 hover:-translate-y-2">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" class="w-10 h-10 opacity-80">
+                </div>
+                <div class="group w-20 h-20 bg-gray-700 flex items-center justify-center rounded-lg transition-transform duration-300 hover:translate-y-2 hover:-translate-y-2">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/aws-original.svg" class="w-10 h-10 opacity-80">
+                </div>
+                <div class="group w-20 h-20 bg-gray-700 flex items-center justify-center rounded-lg transition-transform duration-300 hover:translate-y-2 hover:-translate-y-2">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" class="w-10 h-10 opacity-80">
+                </div>
+                <div class="group w-20 h-20 bg-gray-700 flex items-center justify-center rounded-lg transition-transform duration-300 hover:translate-y-2 hover:-translate-y-2">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg" class="w-10 h-10 opacity-80">
+                </div>
+                <div class="group w-20 h-20 bg-gray-700 flex items-center justify-center rounded-lg transition-transform duration-300 hover:translate-y-2 hover:-translate-y-2">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="w-10 h-10 opacity-80">
+                </div>
+            </div>
+    
+            
+            <div class="text-white">
+                <h2 class="text-lg font-semibold text-blue-400">GenAI Engineering</h2>
+                <h1 class="text-2xl font-bold mt-2">GenAI amplifies every step of our process, blending speed and precision:</h1>
+                <ul class="mt-4 space-y-2">
+                    <li class="flex items-start">
+                        <span class="text-blue-400 mr-2">★</span>
+                        <p><strong>Smart Augmentation:</strong> GenAI agents act as the perfect junior engineers, automating repetitive tasks seamlessly.</p>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-400 mr-2">★</span>
+                        <p><strong>Balanced Speed:</strong> Faster prototyping and development—achieved without compromising oversight.</p>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-400 mr-2">★</span>
+                        <p><strong>Flawless Automation:</strong> AI streamlines the SDLC pipeline while we stay vigilant, ensuring reliability and scalability.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </div> -->
+
+    </div>
+
+  </main>
+  <!-- slider bar -->
+  <div class="bg-[#1F2025] text-white h-250 flex justify-center select-none items-center ">
+    <div class="container max-w-315 w-full h-full mx-auto px-6">
+      <div class="flex justify-between items-center mb-9">
+        <div>
+          <div class="flex items-center">
+            <div class="w-2 h-2 bg-[#557CFA] rounded-full animate-blink mr-2 "></div>
+            <span class=" text-sm font-semibold">Insights That Keep You Ahead</span>
+          </div>
+          <h1 class="text-4xl font-bold mt-2">What’s new?</h1>
+        </div>
+        <a href="Blogs.html"  class="border border-gray-500 text-sm px-4 py-2 rounded-2xl hover:bg-[#557CFA] transition">See all
+          articles</a>
+      </div>
+
+      <div id="slider" class="flex gap-6 overflow-x-auto w-full  scrollbar-hide">
+
+        <!-- Article Card 1 -->
+        <div class="bg-black rounded-lg shadow-lg w-sm flex-shrink-0">
+
+          <img src="./img_src/programming-background-with-person-working-with-codes-computer-300x200 copy.jpg"
+            class="w-full h-125 object-cover select-none rounded-t-lg bg-cover ">
+          <div class="p-7.5  bg-white">
+            <span class="text-xs uppercase tracking-wide text-gray-400">DEVOPS • PRAGMATISM • TECHNOLOGY</span>
+            <h2 class="text-lg text-slate-900 font-semibold mt-2">Software Design Done Right: The Power of
+              Implementation Blueprints</h2>
+            <p class="text-gray-400 text-sm mt-2">Software Design Done Right: The Power of Implementation Blueprints
+              Written by AppHelix Features
+              Your master guide to building production-grade software components. Build a microservice. Create a React
+              component. Design.</p><br>
+            <p class="text-gray-500 text-xs mt-3">APPHELIX FEATURES | JANUARY 1, 2025</p>
+          </div>
+        </div>
+        <div class="bg-black rounded-xl shadow-lg w-sm flex-shrink-0">
+          <img src="./img_src/infinite-loop-artificial-intelligence-automation-e1735721496591-300x200 copy.jpg"
+            class="w-full h-125 object-cover rounded-t-lg bg-cover">
+          <div class="p-7.5  bg-white">
+            <span class="text-xs uppercase tracking-wide text-gray-400">DEVOPS • PRAGMATISM • TECHNOLOGY</span>
+            <h2 class="text-lg text-slate-900 font-semibold mt-2">DevOps Without Dogma: The Case for Engineering Common
+              Sense</h2>
+            <p class="text-gray-400  text-sm mt-2">DevOps Without Dogma: The Case for Engineering Common world Sense
+              Written by AppHelix Features Share There is no software delivery without DevOps, and rightly so. But
+              here’s something we often forget. </p><br>
+            <p class="text-gray-500 text-xs mt-3">APPHELIX FEATURES | JANUARY 1, 2025</p>
+          </div>
+        </div>
+
+        <!-- Article Card 2 -->
+        <div class="bg-black rounded-lg shadow-lg w-sm flex-shrink-0">
+          <img src="./img_src/person-standing-front-holographic-screen-embellished-with-futuristic-symbols-300x300 copy.jpg"
+            class="w-full h-125 object-cover rounded-t-lg bg-cover">
+          <div class="p-7.5 bg-white">
+            <span class="text-xs uppercase tracking-wide text-gray-400">DEVOPS • PRAGMATISM • TECHNOLOGY</span>
+            <h2 class="text-lg text-slate-900 font-semibold mt-2">Engineering with Impact: The Consultant Engineer
+              Mindset</h2>
+            <p class="text-gray-400 text-sm mt-2">Engineering with Impact: The Consultant Engineer Mindset Written by
+              AppHelix Features Share The Missing Piece Companies aren’t just looking for technical expertise anymore.
+              They need partners who can spot hidden.</p><br>
+            <p class="text-gray-500 text-xs mt-3">APPHELIX FEATURES | JANUARY 1, 2025</p>
+          </div>
+        </div>
+
+        <!-- Article Card 3 -->
+        <div class="bg-black rounded-lg shadow-lg w-sm flex-shrink-0">
+          <img
+            src="./img_src/touch-future-interface-technology-future-user-experience-new-technology-bigdata-business-process-strategy-digital-transformation-change-management-creating-innovative-technologies-300x.jpg"
+            class="w-full h-125 object-cover rounded-t-lg bg-cover">
+          <div class="p-7.5 bg-white">
+            <span class="text-xs uppercase tracking-wide text-gray-400">DEVOPS • PRAGMATISM • TECHNOLOGY</span>
+            <h2 class="text-lg text-slate-900 font-semibold mt-2">The Messy Truth About Gen AI in Production: Field
+              Notes from Reality</h2>
+            <p class="text-gray-400 text-sm mt-2">The Messy Truth About Gen-AI in Production: Field Notes from Reality
+              Written by AppHelix Features Share Why your AI strategy might be take solving word the wrong problem My
+              ChatGPT journey began now</p><br>
+            <p class="text-gray-500 text-xs mt-3">APPHELIX FEATURES | JANUARY 1, 2025</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Pagination Dots -->
+      <!-- <div class="flex justify-center mt-6 space-x-2">
+        <span class="dot w-3 h-3 bg-gray-500 rounded-full cursor-pointer"></span>
+        <span class="dot w-3 h-3 bg-gray-500 rounded-full cursor-pointer"></span>
+        <span class="dot w-3 h-3 bg-gray-500 rounded-full cursor-pointer"></span>
+        <span class="dot w-3 h-3 bg-gray-500 rounded-full cursor-pointer"></span>
+      </div> -->
+    </div>
+  </div>
+
+  <!-- Start a conversation container -->
+ 
+  <!-- Footer -->
+  <footer class=" flex justify-center item-center mt-40 ">
+    <div class="bg-[#557CFA] max-w-300 w-full text-white px-5 rounded-t-2xl  pt-10">
+      <div class=" bg-[#050717] max-w-6xl mx-auto rounded-t-2xl px-6">
+        <div class=" p-8 rounded-lg">
+          <div class="grid md:grid-cols-2 gap-8">
+            <!-- Quick Links -->
+            <div>
+              <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+              <ul class="space-y-2">
+                <li><a href="Home.html" class="hover:underline">Home</a></li>
+                <li><a href="#" class="hover:underline">About</a></li>
+                <li><a href="#" class="hover:underline">Services</a></li>
+                <li><a href="#" class="hover:underline">Careers</a></li>
+                <li><a href="Blogs.html" class="hover:underline">Blogs</a></li>
+                <li><a href="contact.html" class="hover:underline">Contact Us</a></li>
+              </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+              <h3 class="text-lg font-semibold mb-4">Contact</h3>
+              <p class="font-semibold">AppHelix Technologies Private Limited</p>
+              <p class="mt-2 text-sm text-gray-300">
+                9th Floor, WeWork Latitude, RMZ Latitude Commercial,<br>
+                Bellary Road, Hebbal, Bengaluru, Karnataka, India - 560024
+              </p>
+              <p class="mt-4"><strong>Email:</strong> <a href="mailto:info@apphelix.ai"
+                  class="text-blue-300 hover:underline">info@apphelix.ai</a></p>
+              <p class="mt-1"><strong>Phone:</strong> <a href="tel:+917975819939"
+                  class="text-blue-300 hover:underline">+91 797 581 9939</a></p>
+
+              <!-- Social Icons -->
+              <div class="mt-4 flex space-x-3">
+                <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-[#557CFA]">
+                  <svg class="w-5 h-5 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <title>linkedin</title>
+                    <path
+                      d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" />
+                  </svg>
+                </a>
+                <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-[#557CFA]">
+                  <svg class="w-5 h-5 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <title>instagram</title>
+                    <path
+                      d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
+                  </svg>
+                </a>
+                <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-[#557CFA]">
+                  <svg class="w-5 h-5 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <title>facebook</title>
+                    <path
+                      d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="mt-6 text-center text-gray-400 text-sm border-t border-gray-700 pt-4">
+          <div class="flex justify-between items-center max-w-5xl mx-auto px-4">
+            <a href="#" class="hover:underline">Terms and Conditions</a>
+            <p>© 2025 AppHelix Technologies. All Rights Reserved.</p>
+            <a href="#" class="hover:underline">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="partnership.js"></script>
+</body>
+
+</html>
