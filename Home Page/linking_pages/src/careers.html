@@ -101,7 +101,23 @@
 .overlay-inner h2 {
     margin-bottom: 10px;
 }
-    
+
+/* Media query for small screens (e.g., phones) */
+@media (max-width: 768px) {
+    .image-accordion {
+        flex-direction: column; /* Stack items vertically */
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    .accordion-item {
+        flex: 1 1 auto; /* Allow items to grow/shrink based on content */
+        height: 250px; /* Set a fixed height for each item on small screens */
+    }
+
+    .accordion-item:hover {
+        flex: 1 1 auto; /* Prevent expansion on hover for small screens */
+    }
+}
   </style>
   <title>AppHelix Technologies Private Limited &#x2d; Impactful Engineering</title>
 </head>
