@@ -1,0 +1,309 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+
+    <link href="styles/output.css" rel="stylesheet">
+    <title>Blogs-AppHelix</title>
+</head>
+
+<body class="bg-[#080B28] font-RedHat">
+
+    <!-- header -->
+    <header class="flex justify-center items-center pb-8">
+        <nav class="w-full max-w-300 ">
+            <div class="flex justify-between items-center p-2.5">
+                <a class="w-75" href="home.html">
+                    <img src="images\AppHelix-Website-Logo-600X322-3-e1733559274148.png" alt="noimg" srcset="">
+                </a>
+                <svg class="w-7 fill-white mr-5 md:hidden" id="clickToOpen" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24">
+                    <title>page-layout-sidebar-left</title>
+                    <path
+                        d="M6,2H18A2,2 0 0,1 20,4V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V4A2,2 0 0,1 6,2M6,8V16H10V8H6Z" />
+                </svg>
+                <div class="hidden md:block w-3/5 ">
+                    <div class="navbar text-xl flex justify-between text-[#7B8392]">
+
+
+                        <a href="about.html" id="blink" class=" hover:text-amber-50 ">About Us</a>
+
+                        <a href="services.html" id="blink" class="hover:text-amber-50">Services</a>
+                        <a href="careers.html" id="blink" class="hover:text-amber-50">Careers</a>
+                        <a href="parternership.html" id="blink" class="hover:text-amber-50">Partnerships</a>
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 bg-orange-400 rounded-full animate-blink mr-1"></div>
+                            <a class="text-amber-50 " href="blogs.html">Blogs</a>
+                        </div>
+                        <a class="hover:text-amber-50 " id="blink" href="contact.html">Contact</a>
+
+                    </div>
+                </div>
+            </div>
+            <!-- <div id="overlay" class="fixed inset-0 bg-black/40 backdrop-blur-sm hidden z-50"> -->
+            <div class="h-screen w-80 z-100 fixed top-0 bg-amber-50 transform -translate-x-520 transition-transform duration-1000 ease-in-out"
+                id="hiddensidebar">
+                <div class="flex justify-between items-center p-4">
+                    <div class="text-2xl">Menu</div>
+                    <button type="close" id="close"><svg id="close" class="w-7 cursor-pointer"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <title>close-box-outline</title>
+                            <path
+                                d="M19,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M19,19H5V5H19V19M17,8.4L13.4,12L17,15.6L15.6,17L12,13.4L8.4,17L7,15.6L10.6,12L7,8.4L8.4,7L12,10.6L15.6,7L17,8.4Z" />
+                        </svg></button>
+                </div>
+                <div class="mt-5">
+                    <a href="about.html" class="h-12 flex items-center px-5 py-1.5 text-slate-400 ">
+                        <h1>About Us</h1>
+
+                    </a>
+                    <hr class="h-px border-0 bg-gray-200">
+                    <a href="services.html" class="h-12 flex items-center px-5 py-1.5 text-slate-400">
+                        <h1>Services</h1>
+
+                    </a>
+                    <hr class="h-px border-0 bg-gray-200">
+                    <a href="careers.html" class="h-12 flex items-center px-5 py-1.5 text-slate-400">
+                        <h1>Careers</h1>
+
+                    </a>
+                    <hr class="h-px border-0 bg-gray-200">
+                    <a href="parternership.html" class="h-12 flex items-center px-5 py-1.5 text-slate-400">
+                        <h1>Partnerships</h1>
+
+                    </a>
+                    <hr class="h-px border-0 bg-gray-200">
+                    <a href="blogs.html" class="h-12 flex items-center px-5 py-1.5 text-slate-400">
+                        <h1>Blogs</h1>
+
+                    </a>
+                    <hr class="h-px border-0 bg-gray-200">
+                    <a href="contact.html" class="h-12 flex items-center px-5 py-1.5 text-slate-400">
+                        <h1>Contact</h1>
+
+                    </a>
+                    <hr class="h-px border-0 bg-gray-200">
+                </div>
+            </div>
+            <!-- </div> -->
+
+
+        </nav>
+    </header>
+    <!-- body -->
+    <main class="flex flex-col  justify-center items-center mx-3.5">
+        <!-- First container -->
+        <div class="max-w-300 w-full bg-[#080B28] rounded-2xl  text-white">
+            <div class="max-w-8xl mx-auto lg:px-12 pt-12 pb-18">
+                <div class="flex flex-col sm:flex-row gap-3  items-center justify-between space-x-4">
+                    <div class="flex-grow relative">
+                        <input type="text" placeholder="Search..."
+                            class="w-full px-4 bg-white py-2 pl-10 rounded-sm text-slate-700 border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+
+                    </div>
+                    <div class="relative flex flex-row gap-4">
+                        <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md flex items-center space-x-2"
+                            id="dropdownButton">
+                            <span>All Posts</span>
+                            <span>▼</span>
+                        </button>
+                        <div class="absolute hidden bg-white shadow-md rounded-md mt-10  " id="dropdownMenu">
+                            <button class="block text-gray-700  text-left px-4 py-2 hover:bg-gray-100 w-full">All
+                                Posts</button>
+                            <button
+                                class="block text-gray-700 w-full text-left px-4 py-2 hover:bg-gray-100">Posts</button>
+                        </div>
+                        <button
+                            class="bg-blue-600 text-white px-7 py-2 rounded-md hover:bg-blue-700 font-semibold">Search</button>
+                    </div>
+                </div>
+                <div class="mt-15  ">
+                    <div class="">
+                        <div class="text-6xl font-semibold">
+                            Latest Posts
+                        </div>
+                    </div>
+                    <div class="mt-10 sm:flex sm:flex-row">
+                        <div><img class="w-150 h-90 rounded-2xl object-cover"
+                                src="images\programming-background-with-person-working-with-codes-computer-300x200 copy.jpg"
+                                alt=""></div>
+                        <div class="sm:pl-8 pt-4 flex flex-col justify-between">
+                            <div class="f">
+                                <div class="text-2xl font-semibold hover:text-[#5a70b7]">Software Design Done Right: The
+                                    Power of Implementation Blueprints</div>
+                                <div class="text-slate-500 font-semibold mt-3">Software Design Done Right: The Power of
+                                    Implementation Blueprints Written by AppHelix Features Share Your master[…]</div>
+                            </div>
+                            <div class="">
+                                <hr class="text-slate-500">
+                                <div class="flex items-center">
+                                    <div class="w-2 h-2 bg-[#2DF293] rounded-full animate-blink mr-1 mt-3"></div>
+                                    <div class="mt-3 font-semibold"><span class="hover:text-[#5a70b7]">AppHelix
+                                            Features</span>
+                                        - February 24, 2025</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-10 sm:flex sm:flex-row">
+                        <div><img class="w-150 h-90 rounded-2xl object-cover"
+                                src="images\infinite-loop-artificial-intelligence-automation-e1735721496591-300x200 copy.jpg"
+                                alt=""></div>
+                        <div class="sm:pl-8 pt-4 flex flex-col justify-between">
+                            <div class="">
+                                <div class="text-2xl font-semibold hover:text-[#5a70b7]">Software Design Done Right: The
+                                    Power of Implementation Blueprints</div>
+                                <div class="text-slate-500 font-semibold mt-3">Software Design Done Right: The Power of
+                                    Implementation Blueprints Written by AppHelix Features Share Your master[…]</div>
+                            </div>
+                            <div class="">
+                                <hr class="text-slate-500">
+                                <div class="flex items-center">
+                                    <div class="w-2 h-2 bg-[#2DF293] rounded-full animate-blink mr-1 mt-3"></div>
+                                    <div class="mt-3 font-semibold"><span class="hover:text-[#5a70b7]">AppHelix
+                                            Features</span>
+                                        - February 24, 2025</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-10 sm:flex sm:flex-row">
+                        <div><img class="w-150 h-90 rounded-2xl object-cover "
+                                src="images\person-standing-front-holographic-screen-embellished-with-futuristic-symbols-300x300 copy.jpg"
+                                alt=""></div>
+                        <div class="sm:pl-8 pt-4 flex flex-col justify-between">
+                            <div class="f">
+                                <div class="text-2xl font-semibold hover:text-[#5a70b7]">Software Design Done Right: The
+                                    Power of Implementation Blueprints</div>
+                                <div class="text-slate-500 font-semibold mt-3">Software Design Done Right: The Power of
+                                    Implementation Blueprints Written by AppHelix Features Share Your master[…]</div>
+                            </div>
+                            <div class="">
+                                <hr class="text-slate-500">
+                                <div class="flex items-center">
+                                    <div class="w-2 h-2 bg-[#2DF293] rounded-full animate-blink mr-1 mt-3"></div>
+                                    <div class="mt-3 font-semibold"><span class="hover:text-[#5a70b7]">AppHelix
+                                            Features</span>
+                                        - February 24, 2025</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-10 sm:flex sm:flex-row">
+                        <div><img class="w-130 h-90 rounded-2xl object-cover"
+                                src="images\touch-future-interface-technology-future-user-experience-new-technology-bigdata-business-process-strategy-digital-transformation-change-management-creating-innovative-technologies-300x.jpg"
+                                alt=""></div>
+                        <div class="sm:pl-8 pt-4 flex flex-col justify-between">
+                            <div class="f">
+                                <div class="text-2xl font-semibold hover:text-[#5a70b7]">The Messy Truth About Gen AI in
+                                    Production: Field Notes from Reality</div>
+                                <div class="text-slate-500 font-semibold mt-3">The Messy Truth About Gen-AI in
+                                    Production: Field Notes from Reality
+                                    Written by AppHelix Features[…]</div>
+                            </div>
+                            <div class="">
+                                <hr class="text-slate-500">
+                                <div class="flex items-center">
+                                    <div class="w-2 h-2 bg-[#2DF293] rounded-full animate-blink mr-1 mt-3"></div>
+                                    <div class="mt-3 font-semibold"><span class="hover:text-[#5a70b7]">AppHelix
+                                            Features</span>
+                                        - April 26, 2024</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class=" flex justify-center item-center mt-40 ">
+        <div class="bg-[#557CFA] max-w-300 w-full text-white px-5 rounded-t-2xl  pt-10">
+            <div class=" bg-[#050717] max-w-6xl mx-auto rounded-t-2xl px-6">
+                <div class=" p-8 rounded-lg">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Quick Links -->
+                        <div>
+                            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                            <ul class="space-y-2">
+                                <li><a href="home.html" class="hover:underline">Home</a></li>
+                                <li><a href="about.html" class="hover:underline">About</a></li>
+                                <li><a href="services.html" class="hover:underline">Services</a></li>
+                                <li><a href="careers.html" class="hover:underline">Careers</a></li>
+                                <li><a href="blogs.html" class="hover:underline">Blogs</a></li>
+                                <li><a href="contact.html" class="hover:underline">Contact Us</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Contact Info -->
+                        <div>
+                            <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                            <p class="font-semibold">AppHelix Technologies Private Limited</p>
+                            <p class="mt-2 text-sm text-gray-300">
+                                9th Floor, WeWork Latitude, RMZ Latitude Commercial,<br>
+                                Bellary Road, Hebbal, Bengaluru, Karnataka, India - 560024
+                            </p>
+                            <p class="mt-4"><strong>Email:</strong> <a href="mailto:info@apphelix.ai"
+                                    class="text-blue-300 hover:underline">info@apphelix.ai</a></p>
+                            <p class="mt-1"><strong>Phone:</strong> <a href="tel:+917975819939"
+                                    class="text-blue-300 hover:underline">+91 797 581 9939</a></p>
+
+                            <!-- Social Icons -->
+                            <div class="mt-4 flex space-x-3">
+                                <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-[#557CFA]">
+                                    <svg class="w-5 h-5 fill-white" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24">
+                                        <title>linkedin</title>
+                                        <path
+                                            d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" />
+                                    </svg>
+                                </a>
+                                <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-[#557CFA]">
+                                    <svg class="w-5 h-5 fill-white" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24">
+                                        <title>instagram</title>
+                                        <path
+                                            d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
+                                    </svg>
+                                </a>
+                                <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-[#557CFA]">
+                                    <svg class="w-5 h-5 fill-white" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24">
+                                        <title>facebook</title>
+                                        <path
+                                            d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Bottom -->
+                <div class="mt-6 text-center text-gray-400 text-sm border-t border-gray-700 pt-4">
+                    <div class="flex justify-between items-center max-w-5xl mx-auto px-4">
+                        <a href="#" class="hover:underline">Terms and Conditions</a>
+                        <p>© 2025 AppHelix Technologies. All Rights Reserved.</p>
+                        <a href="#" class="hover:underline">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="scripts/blogsscript.js"></script>
+    <script src="scripts/commonscript.js"></script>
+</body>
+
+</html>
