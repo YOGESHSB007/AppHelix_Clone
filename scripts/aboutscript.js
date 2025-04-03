@@ -29,3 +29,19 @@ document.querySelectorAll("h3").forEach((h3) => {
     line.style.left = "100%";
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const cards = document.querySelectorAll('.feature-card');
+
+  cards.forEach(card => {
+      card.addEventListener('mouseover', function() {
+          this.style.boxShadow = '0px 0px 20px rgba(0, 204, 255, 0.6)';
+          this.style.transform = 'scale(1.05)';
+      });
+
+      card.addEventListener('mouseout', function() {
+          this.style.boxShadow = 'none';
+          this.style.transform = 'scale(1)';
+      });
+  });
+});
