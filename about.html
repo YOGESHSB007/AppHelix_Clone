@@ -17,6 +17,23 @@
       background-color: orange;
       color: white;
     }
+    @media (min-width: 768px) {
+            .feature-cards-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: stretch;
+            }
+
+            .feature-card {
+                flex: 1; /* Distribute available space equally */
+                margin-bottom: 0 !important; /* Remove bottom margin on larger screens */
+            }
+
+            .feature-card:not(:last-child) {
+                margin-right: 20px; /* Add right margin to create space between cards */
+            }
+        }
   </style>
   <title>AppHelix Technologies Private Limited &#x2d; Impactful Engineering</title>
 </head>
@@ -202,76 +219,64 @@
 
     </div>
 
-    <<div class="bg-[#1F2025] w-full text-white px-4 pt-6">
+    <div class="px-4 pt-6">
       <div class="flex flex-col items-center text-center p-6">
-        <div class="bg-gray-900 flex items-center justify-center min-h-screen w-full">
-          <div class="flex flex-wrap justify-center gap-6 px-4 max-w-6xl w-full">
-
-            <div
-              class="bg-black text-white p-6 rounded-xl text-center cursor-pointer transition-all duration-300 relative group"
-              style="box-shadow: none; transition: all 0.3s ease-in-out; border: 1px solid rgba(255, 255, 255, 0.2);"
-              onmouseover="this.style.boxShadow='0px 0px 20px rgba(0, 204, 255, 0.6)'; this.style.transform='scale(1.05)';"
-              onmouseout="this.style.boxShadow='none'; this.style.transform='scale(1)';">
-              <p class="text-3xl font-bold mb-2 text-right">01</p>
-
-              <div class="flex justify-center">
-                <img src="https://apphelix.ai/wp-content/uploads/2024/11/Flag-Achievement-Streamline-Atlas.svg"
-                  alt="Icon 1" class="w-12 h-12 mb-3">
+          <div class="bg-gray-900 w-full max-w-6xl">
+              <div class="grid grid-cols-1 gap-6 feature-cards-container">
+                <div class="feature-card bg-black p-6 rounded-xl text-center cursor-pointer transition-all duration-300 relative group mb-6">
+                  <p class="text-5xl font-bold text-gray-500" style="position: absolute; top: 1rem; right: 1rem;">01</p>
+              
+                  <div style="position: absolute; top: 1.5rem; left: 1rem;">
+                      <img src="https://apphelix.ai/wp-content/uploads/2024/11/Flag-Achievement-Streamline-Atlas.svg" alt="Icon 1" class="w-12 h-12">
+                  </div>
+              
+                  <div style="margin-top: 5rem;">
+                      <h3 class="text-xl font-semibold" style="color: #718096; text-align: left;">We Listen</h3>
+                      <p class="text-gray-400 text-sm mt-2" style="text-align: left;">Early iterations save time and uncover what really works.</p>
+                  </div>
               </div>
-              <h3 class="text-lg font-semibold">We Listen</h3>
-              <p class="text-gray-400 text-sm mt-2">Before we touch a keyboard, we dig into your challenges,
-                frustrations, and goals.</p>
-            </div>
-
-            <div
-              class="bg-black text-white p-6 rounded-xl text-center cursor-pointer transition-all duration-300 relative group"
-              style="box-shadow: none; transition: all 0.3s ease-in-out; border: 1px solid rgba(255, 255, 255, 0.2);"
-              onmouseover="this.style.boxShadow='0px 0px 20px rgba(0, 204, 255, 0.6)'; this.style.transform='scale(1.05)';"
-              onmouseout="this.style.boxShadow='none'; this.style.transform='scale(1)';">
-              <p class="text-3xl font-bold mb-2">02</p>
-              <div class="flex justify-center">
-                <img src="https://apphelix.ai/wp-content/uploads/2024/11/Proto-Io-Logo-2-Streamline-Logos.svg"
-                  alt="Icon 2" class="w-12 h-12 mb-3">
+              
+              <div class="feature-card bg-black p-6 rounded-xl text-center cursor-pointer transition-all duration-300 relative group mb-6">
+                  <p class="text-5xl font-bold text-gray-500" style="position: absolute; top: 1rem; right: 1rem;">02</p>
+              
+                  <div style="position: absolute; top: 1rem; left: 1rem;">
+                      <img src="https://apphelix.ai/wp-content/uploads/2024/11/Proto-Io-Logo-2-Streamline-Logos.svg" alt="Icon 2" class="w-12 h-12">
+                  </div>
+              
+                  <div style="margin-top: 5rem;">
+                      <h3 class="text-xl font-semibold" style="color: #718096; text-align: left;">We Prototype Quickly</h3>
+                      <p class="text-gray-400 text-sm mt-2" style="text-align: left;">Early iterations save time and uncover what really works.</p>
+                  </div>
               </div>
-              <h3 class="text-lg font-semibold">We Prototype Quickly</h3>
-              <p class="text-gray-400 text-sm mt-2">Early iterations save time and uncover what really works.</p>
-            </div>
-
-            <div
-              class="bg-black text-white p-6 rounded-xl text-center cursor-pointer transition-all duration-300 relative group"
-              style="box-shadow: none; transition: all 0.3s ease-in-out; border: 1px solid rgba(255, 255, 255, 0.2);"
-              onmouseover="this.style.boxShadow='0px 0px 20px rgba(0, 204, 255, 0.6)'; this.style.transform='scale(1.05)';"
-              onmouseout="this.style.boxShadow='none'; this.style.transform='scale(1)';">
-              <p class="text-3xl font-bold mb-2">03</p>
-              <div class="flex justify-center">
-                <img src="https://apphelix.ai/wp-content/uploads/2024/11/Enlarge-Streamline-Iconoir.svg" alt="Icon 3"
-                  class="w-12 h-12 mb-3">
+              
+              <div class="feature-card bg-black p-6 rounded-xl text-center cursor-pointer transition-all duration-300 relative group mb-6">
+                  <p class="text-5xl font-bold text-gray-500" style="position: absolute; top: 1rem; right: 1rem;">03</p>
+              
+                  <div style="position: absolute; top: 1rem; left: 1rem;">
+                      <img src="https://apphelix.ai/wp-content/uploads/2024/11/Enlarge-Streamline-Iconoir.svg" alt="Icon 3" class="w-12 h-12">
+                  </div>
+              
+                  <div style="margin-top: 5rem;">
+                      <h3 class="text-xl font-semibold" style="color: #718096; text-align: left;">We Build for the Real World</h3>
+                      <p class="text-gray-400 text-sm mt-2" style="text-align: left;">No theoretical designs—just practical, scalable solutions that are ready to go.</p>
+                  </div>
               </div>
-              <h3 class="text-lg font-semibold">We Build for the Real World</h3>
-              <p class="text-gray-400 text-sm mt-2">No theoretical designs—just practical, scalable solutions that are
-                ready to go.</p>
-            </div>
-
-            <div
-              class="bg-black text-white p-6 rounded-xl text-center cursor-pointer transition-all duration-300 relative group"
-              style="box-shadow: none; transition: all 0.3s ease-in-out; border: 1px solid rgba(255, 255, 255, 0.2);"
-              onmouseover="this.style.boxShadow='0px 0px 20px rgba(0, 204, 255, 0.6)'; this.style.transform='scale(1.05)';"
-              onmouseout="this.style.boxShadow='none'; this.style.transform='scale(1)';">
-              <p class="text-3xl font-bold mb-2">04</p>
-              <div class="flex justify-center">
-                <img
-                  src="https://apphelix.ai/wp-content/uploads/2024/11/Align-Vertical-Space-Around-Streamline-Lucide.svg"
-                  alt="Icon 4" class="w-12 h-12 mb-3">
+              
+              <div class="feature-card bg-black p-6 rounded-xl text-center cursor-pointer transition-all duration-300 relative group mb-6">
+                  <p class="text-5xl font-bold text-gray-500" style="position: absolute; top: 1rem; right: 1rem;">04</p>
+              
+                  <div style="position: absolute; top: 1rem; left: 1rem;">
+                      <img src="https://apphelix.ai/wp-content/uploads/2024/11/Align-Vertical-Space-Around-Streamline-Lucide.svg" alt="Icon 4" class="w-12 h-12">
+                  </div>
+              
+                  <div style="margin-top: 5rem;">
+                      <h3 class="text-xl font-semibold" style="color: #718096; text-align: left;">We Stick Around</h3>
+                      <p class="text-gray-400 text-sm mt-2" style="text-align: left;">After launch, we’re still here—fine-tuning, optimizing, and helping you scale.</p>
+                  </div>
               </div>
-              <h3 class="text-lg font-semibold">We Stick Around</h3>
-              <p class="text-gray-400 text-sm mt-2">After launch, we’re still here—fine-tuning, optimizing, and helping
-                you scale.</p>
-            </div>
-
-          </div>
-        </div>
       </div>
-      </div>
+  </div>
+
 
       <!--founders templete -->
 
