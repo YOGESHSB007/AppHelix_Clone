@@ -90,28 +90,32 @@ slider.addEventListener("scroll", () => {
 
 
 document.querySelectorAll("#blink").forEach((anchor) => {
-  // Create the blinking dot dynamically for each link
   const dot = document.createElement("div");
   dot.className =
-    "w-1.5 h-1.5 bg-orange-400 rounded-full animate-blink mr-1 hidden"; // Initially hidden
+    "w-1.5 h-1.5 bg-orange-400 rounded-full animate-blink mr-1"; 
 
-  // Wrap anchor inside a flex div
+  // Create wrapper div
   const wrapper = document.createElement("div");
   wrapper.className = "flex items-center";
-  wrapper.appendChild(dot);
-  wrapper.appendChild(anchor.cloneNode(true)); // Clone to avoid moving existing anchor
 
-  // Replace anchor with wrapper
+  // Clone anchor and add to wrapper
+  const clonedAnchor = anchor.cloneNode(true);
+  wrapper.appendChild(dot);
+  wrapper.appendChild(clonedAnchor);
+
+  // Replace original anchor with wrapper
   anchor.replaceWith(wrapper);
 
-  // Event Listeners
+  // Hide dot initially
+  dot.style.visibility = "hidden";
+
+  // Show/hide on hover
   wrapper.addEventListener("mouseover", () => {
-    // wrapper.querySelector("a").classList.add("text-white");
-    dot.classList.remove("hidden");
+    dot.style.visibility = "visible";
   });
 
   wrapper.addEventListener("mouseout", () => {
-    // wrapper.querySelector("a").classList.remove("text-white");
-    dot.classList.add("hidden");
+    dot.style.visibility = "hidden";
   });
 });
+

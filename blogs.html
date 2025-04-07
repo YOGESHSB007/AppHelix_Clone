@@ -108,20 +108,24 @@
 
                     </div>
                     <div class="relative flex flex-row gap-4">
-                        <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md flex items-center space-x-2"
-                            id="dropdownButton">
-                            <span>All Posts</span>
+                        <!-- Dropdown Wrapper -->
+                        <div class="relative">
+                          <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md flex items-center space-x-2 w-full" id="dropdownButton">
+                            <span id="dropdownSelected">All Posts</span>
                             <span>▼</span>
-                        </button>
-                        <div class="absolute hidden bg-white shadow-md rounded-md mt-10  " id="dropdownMenu">
-                            <button class="block text-gray-700  text-left px-4 py-2 hover:bg-gray-100 w-full">All
-                                Posts</button>
-                            <button
-                                class="block text-gray-700 w-full text-left px-4 py-2 hover:bg-gray-100">Posts</button>
+                          </button>
+                      
+                          <!-- Dropdown Menu -->
+                          <div class="absolute hidden bg-white shadow-md rounded-md mt-2 min-w-full z-10" id="dropdownMenu">
+                            <button class="block text-gray-700 text-left px-4 py-2 hover:bg-gray-100 space-x-2 w-full">All Posts</button>
+                            <button class="block text-gray-700 text-left px-4 py-2 hover:bg-gray-100 w-full">Posts</button>
+                          </div>
                         </div>
-                        <button
-                            class="bg-blue-600 text-white px-7 py-2 rounded-md hover:bg-blue-700 font-semibold">Search</button>
-                    </div>
+                      
+                        <!-- Search Button -->
+                        <button class="bg-blue-600 text-white px-7 py-2 rounded-md hover:bg-blue-700 font-semibold">Search</button>
+                      </div>
+                      
                 </div>
                 <div class="mt-15  ">
                     <div class="">
