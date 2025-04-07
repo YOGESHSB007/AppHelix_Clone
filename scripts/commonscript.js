@@ -119,3 +119,9 @@ document.querySelectorAll("#blink").forEach((anchor) => {
   });
 });
 
+
+  wrapper.addEventListener("mouseout", () => {
+    dot.style.visibility = "hidden";
+  });
+});
+
