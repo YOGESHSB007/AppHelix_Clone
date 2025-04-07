@@ -102,11 +102,14 @@
   <main class="flex flex-col  justify-center items-center mx-3.5">
     <!-- First container -->
     <div class=" max-w-300 w-full bg-[#050717] rounded-2xl shadow-2xl text-white">
-      <div class="max-w-8xl mx-auto px-12 pt-12 pb-18">
+      <d class="max-w-8xl mx-auto px-12 pt-12 pb-18">
         <div>
-          <h1 class="text-5xl font-semibold mb-4 text-center ">Build Strategic Alliances</h1>
-          <p class="mb-8 text-xl  text-[#B6BBC5] font-medium text-center">Join forces with AppHelix to engineer
-            transformative solutions. Together, we can solve complex<br> challenges that others can't—or won't.</p>
+          <h1 class="text-5xl sm:text-4xl md:text-5xl font-semibold mb-4 text-center sm:text-left">Build Strategic Alliances</h1>
+          <p class="mb-8 text-lg sm:text-xl md:text-xl text-[#B6BBC5] font-medium text-center sm:text-left">
+              Join forces with AppHelix to engineer transformative solutions. Together, we can solve complex<br class="sm:hidden"> challenges that others can't—or won't.
+          </p>
+      </div>
+
           <div class="flex">
             <div class="p-4 overflow-hidden rounded-3xl shadow-lg w-full max-w-4xl mx-auto">
               <img class="w-full h-auto object-cover rounded-3xl" loading="lazy" decoding="async"
@@ -233,60 +236,66 @@
       </div>
       <div class="mt-8 px-1 w-full">
         <form class="grid gap-4 mt-5 px-3">
-          <div class="w-full">
-            <div>
-              <div class="flex items-center mb-4">
-                <div class="w-full px-6">
-                  <form class="space-y-4 w-full">
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
-                      <div class="mb-3">
-                        <label class="block text-gray-400 font-semibold mb-1">First Name <span
-                            class="text-red-500">*</span></label>
-                        <input type="text" placeholder="Please enter your first name"
-                          class="w-full p-2 rounded-none bg-white text-slate-800 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                      </div>
-                      <div class="mb-3">
-                        <label class="block text-gray-400 font-semibold mb-1">Last Name <span
-                            class="text-red-500">*</span></label>
-                        <input type="text" placeholder="Please enter your last name"
-                          class="w-full p-2 rounded-none bg-white text-slate-800 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                      </div>
-                      <div class="sm:col-span-2 mb-3 w-full">
-                        <label class="block text-gray-400 font-semibold mb-1">Organization <span
-                            class="text-red-500">*</span></label>
-                        <input type="email" placeholder="Please enter your email"
-                          class="w-full p-2 rounded-none bg-white text-slate-800 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                      </div><br><br>
-                      <div class="mb-3">
-                        <label class="block text-gray-400 font-semibold mb-1">Email <span
-                            class="text-red-500">*</span></label>
-                        <input type="email" placeholder="Please enter your email"
-                          class="w-full p-2 rounded-none bg-white text-slate-800 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                      </div>
-                      <div class="mb-3">
-                        <label class="block text-gray-400 font-semibold mb-1">Confirm Email <span
-                            class="text-red-500">*</span></label>
-                        <input type="email" placeholder="Please re-enter your email"
-                          class="w-full p-2 rounded-none bg-white text-slate-800 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                      </div>
-                      <div class="sm:col-span-2 mb-3">
-                        <label class="block text-gray-400 font-semibold mb-1">Message <span
-                            class="text-red-500">*</span></label>
-                        <textarea placeholder="How may we be of assistance?"
-                          class="w-full p-2 rounded-none bg-white text-slate-800 h-40 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-                      </div><br>
-                      <div class="sm:col-span-2 mb-3">
-                        <button type="submit"
-                          class="bg-[#547CFF] text-white px-10 py-4 text-lg font-semibold rounded-none hover:bg-blue-500 transition duration-300 w-full">Submit</button>
-                      </div>
+            <div class="w-full">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-full px-6">
+                            <form class="space-y-4 w-full">
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
+                                  <div class="mb-3">
+                                    <label class="block text-gray-400 font-semibold mb-1">First Name <span
+                                            style="color: red !important;" class="text-red-500">*</span></label>
+                                    <input type="text" placeholder="Please enter your first name"
+                                        class="w-full p-2 rounded-none bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        style="color: #333;">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="block text-gray-400 font-semibold mb-1">Last Name <span
+                                            style="color: red !important;" class="text-red-500">*</span></label>
+                                    <input type="text" placeholder="Please enter your last name"
+                                        class="w-full p-2 rounded-none bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        style="color: #333;">
+                                </div>
+                                <div class="sm:col-span-2 mb-3 w-full">
+                                    <label class="block text-gray-400 font-semibold mb-1">Organization <span
+                                            style="color: red !important;" class="text-red-500">*</span></label>
+                                    <input type="email" placeholder="Please enter your email"
+                                        class="w-full p-2 rounded-none bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        style="color: #333;">
+                                </div><br><br>
+                                <div class="mb-3">
+                                    <label class="block text-gray-400 font-semibold mb-1">Email <span
+                                            style="color: red !important;" class="text-red-500">*</span></label>
+                                    <input type="email" placeholder="Please enter your email"
+                                        class="w-full p-2 rounded-none bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        style="color: #333;">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="block text-gray-400 font-semibold mb-1">Confirm Email <span
+                                            style="color: red !important;" class="text-red-500">*</span></label>
+                                    <input type="email" placeholder="Please re-enter your email"
+                                        class="w-full p-2 rounded-none bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        style="color: #333;">
+                                </div>
+                                <div class="sm:col-span-2 mb-3">
+                                    <label class="block text-gray-400 font-semibold mb-1">Message <span
+                                            style="color: red !important;" class="text-red-500">*</span></label>
+                                    <textarea placeholder="How may we be of assistance?"
+                                        class="w-full p-2 rounded-none bg-white h-40 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        style="color: #333;"></textarea>
+                                </div><br>
+                                <div class="sm:col-span-2 mb-3">
+                                    <button type="submit"
+                                        class="bg-[#547CFF] text-white px-10 py-4 text-lg font-semibold rounded-none hover:bg-blue-500 transition duration-300 w-full">Submit</button>
+                                </div>
+                                </div>
+                            </form>
+    
+                        </div>
                     </div>
-                  </form>
                 </div>
-              </div>
             </div>
-          </div>
         </form>
-      </div>
     </div>
 
 
