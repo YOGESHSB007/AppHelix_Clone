@@ -94,7 +94,7 @@ document.querySelectorAll("#blink").forEach((anchor) => {
   dot.className =
     "w-1.5 h-1.5 bg-orange-400 rounded-full animate-blink mr-1"; 
 
-  // Create wrapper div
+  
   const wrapper = document.createElement("div");
   wrapper.className = "flex items-center";
 
